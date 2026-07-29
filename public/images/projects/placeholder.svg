@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <rect width="1200" height="750" fill="#0b0d10"/>
+  <circle cx="920" cy="180" r="240" fill="#2563eb" opacity="0.2"/>
+  <text x="80" y="390" fill="#f4f6f8" font-family="system-ui,sans-serif" font-size="40" font-weight="700">PROJECT</text>
+</svg>
