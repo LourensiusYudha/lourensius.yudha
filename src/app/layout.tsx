@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Fira_Code, Outfit } from "next/font/google";
+import { Fira_Code, Outfit } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -7,13 +7,6 @@ const outfit = Outfit({
   variable: "--font-outfit",
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
-});
-
-const bebas = Bebas_Neue({
-  subsets: ["latin"],
-  variable: "--font-bebas",
-  display: "swap",
-  weight: "400",
 });
 
 const fira = Fira_Code({
@@ -24,31 +17,25 @@ const fira = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Lourensius Yudha Kristianto – IT Portfolio",
+  title: "Lourensius Yudha Kristianto | IT Systems and Data Specialist",
   description:
-    "IT portfolio of Lourensius Yudha Kristianto - System Developer, Database Specialist, and Retail Data Analyst.",
+    "Portfolio of Lourensius Yudha Kristianto, focused on internal systems, database engineering, reporting automation, and retail operations.",
   openGraph: {
-    title: "Lourensius Yudha Kristianto – IT Portfolio",
-    description: "System Developer · Database Specialist · Retail Data Analyst",
-    images: ["/images/yudha.jpeg"],
+    title: "Lourensius Yudha Kristianto | Portfolio",
+    description: "IT systems, database engineering, and retail operations.",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      data-theme="dark"
-      className={`${outfit.variable} ${bebas.variable} ${fira.variable}`}
+      data-lang="en"
+      data-theme="light"
+      className={`${outfit.variable} ${fira.variable}`}
       suppressHydrationWarning
     >
-      <body className="antialiased" suppressHydrationWarning>
-        {children}
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
