@@ -165,7 +165,7 @@ export const projects: PortfolioProject[] = [
       id: ["Alur approval lebih cepat", "Status terlihat lintas tim"],
     },
     tech: ["PHP", "PostgreSQL", "JavaScript"],
-    image: "/images/pga-inventory.jpg",
+    image: "/images/pga-inventory.png",
     imageAlt: {
       en: "Dashboard of the PGA inventory request system",
       id: "Dashboard sistem permintaan inventaris PGA",

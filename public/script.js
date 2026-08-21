@@ -959,7 +959,7 @@ const projectData = [
         "Visibilitas penuh lintas tim"
       ]
     },
-    images: ["/images/pga-inventory.jpg"]
+    images: ["/images/pga-inventory.png"]
   },
   // 5 — Internal Operational Website
   {

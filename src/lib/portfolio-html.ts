@@ -149,7 +149,7 @@ export const portfolioHtml = `
           <span class="case-item-title" data-i18n="projects.p5t">PGA Inventory Request System</span>
           <span class="case-item-meta">PHP · PostgreSQL · JavaScript</span>
         </div>
-        <img src="/images/pga-inventory.jpg" alt="" class="case-item-preview" width="120" height="72">
+        <img src="/images/pga-inventory.png" alt="" class="case-item-preview" width="120" height="72">
         <span class="case-item-arrow" aria-hidden="true">→</span>
       </button>
       <button type="button" class="case-item reveal delay-2" data-project-index="5">
