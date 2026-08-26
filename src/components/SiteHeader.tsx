@@ -52,9 +52,9 @@ export function SiteHeader() {
           <span className="lang-copy lang-en">Work</span>
           <span className="lang-copy lang-id">Karya</span>
         </a>
-        <a href="#about" onClick={closeMenu}>
-          <span className="lang-copy lang-en">About</span>
-          <span className="lang-copy lang-id">Tentang</span>
+        <a href="#skills" onClick={closeMenu}>
+          <span className="lang-copy lang-en">Skills</span>
+          <span className="lang-copy lang-id">Keahlian</span>
         </a>
         <a href="#experience" onClick={closeMenu}>
           <span className="lang-copy lang-en">Experience</span>
@@ -64,12 +64,24 @@ export function SiteHeader() {
           <span className="lang-copy lang-en">Contact</span>
           <span className="lang-copy lang-id">Kontak</span>
         </a>
+        <a className="mobile-resume-link" href="/files/CV-Yudha.pdf" download onClick={closeMenu}>
+          <span className="lang-copy lang-en">Download CV</span>
+          <span className="lang-copy lang-id">Unduh CV</span>
+        </a>
+        <div className="mobile-nav-controls">
+          <button type="button" className="text-toggle" onClick={toggleLanguage} aria-label="Toggle language between English and Indonesian">
+            ID / EN
+          </button>
+          <button type="button" className="text-toggle theme-toggle" onClick={toggleTheme} aria-label="Toggle light and dark theme">
+            Theme
+          </button>
+        </div>
       </nav>
 
       <div className="site-controls">
         <button
           type="button"
-          className="text-toggle"
+          className="text-toggle desktop-toggle"
           onClick={toggleLanguage}
           aria-label="Toggle language between English and Indonesian"
         >
@@ -77,7 +89,7 @@ export function SiteHeader() {
         </button>
         <button
           type="button"
-          className="text-toggle theme-toggle"
+          className="text-toggle theme-toggle desktop-toggle"
           onClick={toggleTheme}
           aria-label="Toggle light and dark theme"
         >

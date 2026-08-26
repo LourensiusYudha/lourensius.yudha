@@ -4,7 +4,6 @@ import Image from "next/image";
 import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { projects, type Locale } from "@/lib/portfolio-data";
-import { StickyScroll } from "@/components/StickyScroll";
 
 const subscribeLanguage = (callback: () => void) => {
   window.addEventListener("portfolio-language", callback);
@@ -19,6 +18,8 @@ export function ProjectShowcase() {
   const locale = useSyncExternalStore(subscribeLanguage, getLanguage, getServerLanguage);
   const closeRef = useRef<HTMLButtonElement>(null);
   const returnFocusRef = useRef<HTMLElement | null>(null);
+  const featuredProjectIndexes = [0, 5];
+  const supportingProjectIndexes = [1, 2, 3, 4];
 
   useEffect(() => {
     if (selected === null) return;
@@ -41,44 +42,105 @@ export function ProjectShowcase() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="project-grid" data-projects-stack>
-        {projects.map((project, index) => (
-          <div className={`project-stack-item project-card-${index + 1}`} key={project.title.en}>
-            <motion.button
-              className="project-card"
-              type="button"
-              onClick={() => setSelected(index)}
-              whileHover={{ y: -6 }}
-              whileTap={{ scale: 0.985 }}
-              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-              aria-label={`${locale === "id" ? "Buka detail" : "Open details"}: ${project.title[locale]}`}
-            >
-              <span className="project-media">
-                <Image
-                  src={project.image}
-                  alt={project.imageAlt[locale]}
-                  fill
-                  sizes={index === 0 ? "(max-width: 767px) 100vw, 66vw" : "(max-width: 767px) 100vw, 42vw"}
-                  style={{ objectPosition: project.imagePosition ?? "center" }}
-                />
-                <span className="project-copy">
-                  <span className="project-heading-row">
-                    <span className="project-category">{project.category[locale]}</span>
-                    <span className="project-impact">{project.impacts[locale][0]}</span>
-                  </span>
-                  <strong>{project.title[locale]}</strong>
-                  <span className="project-summary">{project.summary[locale]}</span>
-                  <span className="project-open">{locale === "id" ? "Buka studi kasus" : "Open case study"} <span aria-hidden="true">↗</span></span>
+      <div className="project-showcase">
+        <div className="featured-projects">
+          {featuredProjectIndexes.map((index) => {
+            const project = projects[index];
+            return (
+              <article className={`featured-project featured-project-${index + 1}`} key={project.title.en}>
+                <figure className="featured-project-visual">
+                  <div className="featured-project-media">
+                    <Image
+                      src={project.image}
+                      alt={project.imageAlt[locale]}
+                      fill
+                      sizes="(max-width: 767px) 100vw, 58vw"
+                      style={{ objectPosition: project.imagePosition ?? "center" }}
+                    />
+                  </div>
                   {project.conceptVisual ? (
-                    <span className="concept-note">{locale === "id" ? "Visual konsep" : "Concept visual"}</span>
+                    <figcaption>{locale === "id" ? "Visual konsep untuk merepresentasikan sistem yang bersifat internal." : "Concept visual representing a private internal system."}</figcaption>
                   ) : null}
-                </span>
-              </span>
-            </motion.button>
-          </div>
-        ))}
+                </figure>
+                <div className="featured-project-body">
+                  <span className="project-category">{project.category[locale]}</span>
+                  <h3>{project.title[locale]}</h3>
+                  <p className="featured-project-summary">{project.summary[locale]}</p>
+
+                  <dl className="featured-project-metrics">
+                    {project.impacts[locale].map((impact, impactIndex) => (
+                      <div key={impact}>
+                        <dt>{project.impactLabels?.[locale][impactIndex] ?? (locale === "id" ? "Hasil" : "Outcome")}</dt>
+                        <dd>{impact}</dd>
+                      </div>
+                    ))}
+                  </dl>
+
+                  <div className="featured-project-contribution">
+                    <span>{locale === "id" ? "Kontribusi saya" : "My contribution"}</span>
+                    <p>{project.contribution[locale]}</p>
+                  </div>
+
+                  <div className="project-tech-list" aria-label={locale === "id" ? "Teknologi" : "Technologies"}>
+                    {project.tech.map((item) => <span key={item}>{item}</span>)}
+                  </div>
+
+                  <motion.button
+                    className="project-detail-button"
+                    type="button"
+                    onClick={() => setSelected(index)}
+                    whileTap={{ scale: 0.985 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {locale === "id" ? "Baca studi kasus" : "Read case study"}
+                    <span aria-hidden="true">↗</span>
+                  </motion.button>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="supporting-projects-header">
+          <h3>{locale === "id" ? "Sistem dan otomatisasi lainnya" : "More systems and automation"}</h3>
+          <p>{locale === "id" ? "Project tambahan yang menunjukkan jangkauan pekerjaan development dan operasional saya." : "Additional projects showing the range of my development and operational work."}</p>
+        </div>
+
+        <div className="supporting-projects">
+          {supportingProjectIndexes.map((index) => {
+            const project = projects[index];
+            return (
+              <article className={`supporting-project supporting-project-${index + 1}`} key={project.title.en}>
+                <div className="supporting-project-media">
+                  <Image
+                    src={project.image}
+                    alt={project.imageAlt[locale]}
+                    fill
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                    style={{ objectPosition: project.imagePosition ?? "center" }}
+                  />
+                </div>
+                <div className="supporting-project-body">
+                  <span className="project-category">{project.category[locale]}</span>
+                  <h4>{project.title[locale]}</h4>
+                  <p>{project.summary[locale]}</p>
+                  <div className="supporting-project-evidence">
+                    <span>{locale === "id" ? "Hasil utama" : "Key outcome"}</span>
+                    <strong>{project.impacts[locale][0]}</strong>
+                  </div>
+                  <div className="project-tech-list" aria-label={locale === "id" ? "Teknologi" : "Technologies"}>
+                    {project.tech.map((item) => <span key={item}>{item}</span>)}
+                  </div>
+                  <button className="project-text-link" type="button" onClick={() => setSelected(index)}>
+                    {locale === "id" ? "Lihat detail" : "View details"}
+                    <span aria-hidden="true">↗</span>
+                  </button>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
-      <StickyScroll />
 
       <AnimatePresence>
         {selected !== null ? (
@@ -119,6 +181,10 @@ export function ProjectShowcase() {
               </div>
               <div className="dialog-content">
                 <h3 id="project-dialog-title">{projects[selected].title[locale]}</h3>
+                <div className="dialog-contribution">
+                  <span>{locale === "id" ? "Kontribusi saya" : "My contribution"}</span>
+                  <p>{projects[selected].contribution[locale]}</p>
+                </div>
                 <div className="dialog-story">
                   {projects[selected].detail[locale].map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
@@ -134,30 +200,28 @@ export function ProjectShowcase() {
                     <span key={item}>{item}</span>
                   ))}
                 </div>
-                <div className="dialog-resources">
-                  <section className="dialog-resource">
-                    <span className="dialog-resource-label">{locale === "id" ? "Dokumentasi" : "Documentation"}</span>
-                    <p>{locale === "id" ? "Catatan teknis, alur kerja, dan detail implementasi project." : "Technical notes, workflow, and implementation details for this project."}</p>
+                {projects[selected].documentationUrl || projects[selected].demoUrl ? (
+                  <div className="dialog-resources">
                     {projects[selected].documentationUrl ? (
+                      <section className="dialog-resource">
+                        <span className="dialog-resource-label">{locale === "id" ? "Dokumentasi" : "Documentation"}</span>
+                        <p>{locale === "id" ? "Catatan teknis, alur kerja, dan detail implementasi project." : "Technical notes, workflow, and implementation details for this project."}</p>
                       <a href={projects[selected].documentationUrl} target="_blank" rel="noreferrer">
                         {locale === "id" ? "Buka dokumentasi" : "Open documentation"} <span aria-hidden="true">↗</span>
                       </a>
-                    ) : (
-                      <span className="dialog-resource-pending">{locale === "id" ? "Tautan akan ditambahkan" : "Link will be added"}</span>
-                    )}
-                  </section>
-                  <section className="dialog-resource">
-                    <span className="dialog-resource-label">{locale === "id" ? "Demo website" : "Website demo"}</span>
-                    <p>{locale === "id" ? "Akses langsung ke versi project yang sudah di-hosting." : "Direct access to the hosted version of this project."}</p>
+                      </section>
+                    ) : null}
                     {projects[selected].demoUrl ? (
+                      <section className="dialog-resource">
+                        <span className="dialog-resource-label">{locale === "id" ? "Demo website" : "Website demo"}</span>
+                        <p>{locale === "id" ? "Akses langsung ke versi project yang sudah di-hosting." : "Direct access to the hosted version of this project."}</p>
                       <a href={projects[selected].demoUrl} target="_blank" rel="noreferrer">
                         {locale === "id" ? "Lihat demo" : "View demo"} <span aria-hidden="true">↗</span>
                       </a>
-                    ) : (
-                      <span className="dialog-resource-pending">{locale === "id" ? "Demo belum tersedia" : "Demo not available yet"}</span>
-                    )}
-                  </section>
-                </div>
+                      </section>
+                    ) : null}
+                  </div>
+                ) : null}
               </div>
             </motion.section>
           </motion.div>

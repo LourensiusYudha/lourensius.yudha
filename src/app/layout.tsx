@@ -17,12 +17,30 @@ const fira = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Lourensius Yudha Kristianto | IT Systems and Data Specialist",
+  title: "Lourensius Yudha Kristianto | IT Developer, Support and Infrastructure",
   description:
-    "Portfolio of Lourensius Yudha Kristianto, focused on internal systems, database engineering, reporting automation, and retail operations.",
+    "Portfolio of Lourensius Yudha Kristianto, an IT Developer and Support professional open to remote roles and selected international projects.",
+  keywords: [
+    "IT Developer",
+    "IT Support",
+    "IT Infrastructure",
+    "System Developer",
+    "Database Optimization",
+    "Reporting Automation",
+    "Remote IT",
+  ],
+  authors: [{ name: "Lourensius Yudha Kristianto" }],
+  creator: "Lourensius Yudha Kristianto",
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Lourensius Yudha Kristianto | Portfolio",
-    description: "IT systems, database engineering, and retail operations.",
+    title: "Lourensius Yudha Kristianto | IT Developer",
+    description: "IT development, support, infrastructure, database systems, and operational automation.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Lourensius Yudha Kristianto | IT Developer",
+    description: "IT development, support, infrastructure, database systems, and operational automation.",
   },
 };
 
