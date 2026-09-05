@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Code, Outfit } from "next/font/google";
 import "./globals.css";
+import "./portfolio.css";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const fira = Fira_Code({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lourensiusyudha.my.id"),
   title: "Lourensius Yudha Kristianto | IT Developer, Support and Infrastructure",
   description:
     "Portfolio of Lourensius Yudha Kristianto, an IT Developer and Support professional open to remote roles and selected international projects.",
@@ -31,6 +33,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Lourensius Yudha Kristianto" }],
   creator: "Lourensius Yudha Kristianto",
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Lourensius Yudha Kristianto | IT Developer",

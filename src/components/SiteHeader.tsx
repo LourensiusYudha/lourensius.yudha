@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
@@ -43,27 +44,27 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <a className="site-mark" href="#home" aria-label="Lourensius Yudha Kristianto, home">
+      <Link className="site-mark" href="/" aria-label="Lourensius Yudha Kristianto, home">
         LYK
-      </a>
+      </Link>
 
       <nav id="mobile-navigation" className={`site-nav ${menuOpen ? "is-open" : ""}`} aria-label="Primary navigation">
-        <a href="#work" onClick={closeMenu}>
+        <Link href="/#work" onClick={closeMenu}>
           <span className="lang-copy lang-en">Work</span>
           <span className="lang-copy lang-id">Karya</span>
-        </a>
-        <a href="#skills" onClick={closeMenu}>
+        </Link>
+        <Link href="/#skills" onClick={closeMenu}>
           <span className="lang-copy lang-en">Skills</span>
           <span className="lang-copy lang-id">Keahlian</span>
-        </a>
-        <a href="#experience" onClick={closeMenu}>
+        </Link>
+        <Link href="/#experience" onClick={closeMenu}>
           <span className="lang-copy lang-en">Experience</span>
           <span className="lang-copy lang-id">Pengalaman</span>
-        </a>
-        <a href="#contact" onClick={closeMenu}>
+        </Link>
+        <Link href="/#contact" onClick={closeMenu}>
           <span className="lang-copy lang-en">Contact</span>
           <span className="lang-copy lang-id">Kontak</span>
-        </a>
+        </Link>
         <a className="mobile-resume-link" href="/files/CV-Yudha.pdf" download onClick={closeMenu}>
           <span className="lang-copy lang-en">Download CV</span>
           <span className="lang-copy lang-id">Unduh CV</span>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { projects, type Locale } from "@/lib/portfolio-data";
@@ -49,15 +50,36 @@ export function ProjectShowcase() {
             return (
               <article className={`featured-project featured-project-${index + 1}`} key={project.title.en}>
                 <figure className="featured-project-visual">
-                  <div className="featured-project-media">
-                    <Image
-                      src={project.image}
-                      alt={project.imageAlt[locale]}
-                      fill
-                      sizes="(max-width: 767px) 100vw, 58vw"
-                      style={{ objectPosition: project.imagePosition ?? "center" }}
-                    />
-                  </div>
+                  {index === 0 ? (
+                    <Link
+                      className="featured-project-media project-media-action"
+                      href="/work/grand-opening-gorontalo"
+                      aria-label={`${locale === "id" ? "Baca studi kasus lengkap" : "Read full case study"}: ${project.title[locale]}`}
+                    >
+                      <Image
+                        src={project.image}
+                        alt={project.imageAlt[locale]}
+                        fill
+                        sizes="(max-width: 767px) 100vw, 58vw"
+                        style={{ objectPosition: project.imagePosition ?? "center" }}
+                      />
+                    </Link>
+                  ) : (
+                    <button
+                      className="featured-project-media project-media-action"
+                      type="button"
+                      onClick={() => setSelected(index)}
+                      aria-label={`${locale === "id" ? "Buka detail" : "Open details"}: ${project.title[locale]}`}
+                    >
+                      <Image
+                        src={project.image}
+                        alt={project.imageAlt[locale]}
+                        fill
+                        sizes="(max-width: 767px) 100vw, 58vw"
+                        style={{ objectPosition: project.imagePosition ?? "center" }}
+                      />
+                    </button>
+                  )}
                   {project.conceptVisual ? (
                     <figcaption>{locale === "id" ? "Visual konsep untuk merepresentasikan sistem yang bersifat internal." : "Concept visual representing a private internal system."}</figcaption>
                   ) : null}
@@ -85,16 +107,23 @@ export function ProjectShowcase() {
                     {project.tech.map((item) => <span key={item}>{item}</span>)}
                   </div>
 
-                  <motion.button
-                    className="project-detail-button"
-                    type="button"
-                    onClick={() => setSelected(index)}
-                    whileTap={{ scale: 0.985 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {locale === "id" ? "Baca studi kasus" : "Read case study"}
-                    <span aria-hidden="true">↗</span>
-                  </motion.button>
+                  {index === 0 ? (
+                    <Link className="project-detail-button" href="/work/grand-opening-gorontalo">
+                      {locale === "id" ? "Baca studi kasus lengkap" : "Read full case study"}
+                      <span aria-hidden="true">→</span>
+                    </Link>
+                  ) : (
+                    <motion.button
+                      className="project-detail-button"
+                      type="button"
+                      onClick={() => setSelected(index)}
+                      whileTap={{ scale: 0.985 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {locale === "id" ? "Baca studi kasus" : "Read case study"}
+                      <span aria-hidden="true">↗</span>
+                    </motion.button>
+                  )}
                 </div>
               </article>
             );
@@ -111,7 +140,12 @@ export function ProjectShowcase() {
             const project = projects[index];
             return (
               <article className={`supporting-project supporting-project-${index + 1}`} key={project.title.en}>
-                <div className="supporting-project-media">
+                <button
+                  className="supporting-project-media project-media-action"
+                  type="button"
+                  onClick={() => setSelected(index)}
+                  aria-label={`${locale === "id" ? "Buka detail" : "Open details"}: ${project.title[locale]}`}
+                >
                   <Image
                     src={project.image}
                     alt={project.imageAlt[locale]}
@@ -119,7 +153,7 @@ export function ProjectShowcase() {
                     sizes="(max-width: 767px) 100vw, 50vw"
                     style={{ objectPosition: project.imagePosition ?? "center" }}
                   />
-                </div>
+                </button>
                 <div className="supporting-project-body">
                   <span className="project-category">{project.category[locale]}</span>
                   <h4>{project.title[locale]}</h4>
@@ -190,16 +224,68 @@ export function ProjectShowcase() {
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
+                {projects[selected].gallery?.length ? (
+                  <section className="dialog-gallery" aria-labelledby="dialog-gallery-title">
+                    <div className="dialog-section-heading">
+                      <h4 id="dialog-gallery-title">{locale === "id" ? "Tampilan utama sistem" : "Key system screens"}</h4>
+                      <p>{locale === "id" ? "Buka gambar untuk melihat detail dalam ukuran penuh." : "Open an image to inspect the interface at full size."}</p>
+                    </div>
+                    <div className="dialog-gallery-list">
+                      {projects[selected].gallery.map((item) => (
+                        <figure key={item.src} className="dialog-gallery-item">
+                          <a
+                            className="dialog-gallery-media"
+                            href={item.src}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${locale === "id" ? "Buka gambar ukuran penuh" : "Open full-size image"}: ${item.caption[locale]}`}
+                          >
+                            <Image
+                              src={item.src}
+                              alt={item.alt[locale]}
+                              fill
+                              sizes="(max-width: 767px) calc(100vw - 48px), 820px"
+                            />
+                          </a>
+                          <figcaption>{item.caption[locale]}</figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  </section>
+                ) : null}
                 <div className="dialog-outcomes">
                   {projects[selected].impacts[locale].map((impact) => (
                     <div key={impact}>{impact}</div>
                   ))}
                 </div>
-                <div className="dialog-tech">
-                  {projects[selected].tech.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
-                </div>
+                {projects[selected].techGroups?.length ? (
+                  <section className="dialog-tech-stack" aria-labelledby="dialog-tech-stack-title">
+                    <div className="dialog-section-heading">
+                      <h4 id="dialog-tech-stack-title">{locale === "id" ? "Tech stack yang digunakan" : "Technology stack"}</h4>
+                    </div>
+                    <div className="dialog-tech-groups">
+                      {projects[selected].techGroups.map((group) => (
+                        <section className="dialog-tech-group" key={group.name.en}>
+                          <h5>{group.name[locale]}</h5>
+                          <ul>
+                            {group.items.map((item) => (
+                              <li key={item.name}>
+                                <strong>{item.name}</strong>
+                                <span>{item.description[locale]}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </section>
+                      ))}
+                    </div>
+                  </section>
+                ) : (
+                  <div className="dialog-tech">
+                    {projects[selected].tech.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                )}
                 {projects[selected].documentationUrl || projects[selected].demoUrl ? (
                   <div className="dialog-resources">
                     {projects[selected].documentationUrl ? (

@@ -5,6 +5,20 @@ export type LocalizedCopy = {
   id: string;
 };
 
+export type PortfolioGalleryImage = {
+  src: string;
+  alt: LocalizedCopy;
+  caption: LocalizedCopy;
+};
+
+export type PortfolioTechGroup = {
+  name: LocalizedCopy;
+  items: Array<{
+    name: string;
+    description: LocalizedCopy;
+  }>;
+};
+
 export type PortfolioProject = {
   title: LocalizedCopy;
   category: LocalizedCopy;
@@ -18,6 +32,8 @@ export type PortfolioProject = {
   imageAlt: LocalizedCopy;
   imagePosition?: string;
   conceptVisual?: boolean;
+  gallery?: PortfolioGalleryImage[];
+  techGroups?: PortfolioTechGroup[];
   documentationUrl?: string;
   demoUrl?: string;
 };
@@ -87,7 +103,17 @@ export const projects: PortfolioProject[] = [
       en: ["10+ inventory items", "Manual tracking replaced", "Stock easier to monitor", "Recording errors easier to catch"],
       id: ["10+ item inventaris", "Pencatatan manual digantikan", "Stok lebih mudah dipantau", "Kesalahan lebih mudah ditemukan"],
     },
-    tech: ["Laravel", "MySQL", "PHP"],
+    tech: [
+      "Laravel 13",
+      "PHP 8.5",
+      "MySQL",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Production Web Server",
+      "Shared Hosting",
+      "Git Version Control",
+      "SSL Certificate",
+    ],
     image: "/images/inventory-luvea.png",
     imageAlt: {
       en: "Dashboard of the Luvea inventory system",
@@ -119,7 +145,18 @@ export const projects: PortfolioProject[] = [
       en: ["Live public website", "Clearer brand presence", "Responsive across devices", "Stable day-to-day experience"],
       id: ["Website publik aktif", "Kehadiran brand lebih jelas", "Responsif di berbagai perangkat", "Pengalaman harian yang stabil"],
     },
-    tech: ["HTML", "CSS", "JavaScript"],
+    tech: [
+      "Next.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lenis Scroll",
+      "Vercel",
+      "Production Web Server",
+      "Shared Hosting",
+      "Git Version Control",
+      "SSL Certificate",
+    ],
     image: "/images/luvea-optimized.jpg",
     imageAlt: {
       en: "Luvea website landing page",
@@ -154,7 +191,16 @@ export const projects: PortfolioProject[] = [
       en: ["10-minute reporting step automated", "Scheduled sales updates", "Margin reporting included", "Distributed through WhatsApp"],
       id: ["Proses laporan 10 menit diotomatisasi", "Update sales terjadwal", "Laporan margin tersedia", "Didistribusikan melalui WhatsApp"],
     },
-    tech: ["PHP", "SQL", "WhatsApp API"],
+    tech: [
+      "Node.js",
+      "TypeScript",
+      "Baileys",
+      "PostgreSQL",
+      "qrcode-terminal",
+      "PM2",
+      "Local Server",
+      "Cron Job",
+    ],
     image: "/images/wa-bot.PNG",
     imageAlt: {
       en: "Sales report delivered by the WhatsApp monitoring bot",
@@ -190,7 +236,18 @@ export const projects: PortfolioProject[] = [
       en: ["Used across departments", "Approvals easier to track", "Request history organized", "Status visible to teams"],
       id: ["Digunakan lintas departemen", "Approval lebih mudah dipantau", "Riwayat pengajuan tersusun", "Status terlihat oleh tim"],
     },
-    tech: ["PHP", "PostgreSQL", "JavaScript"],
+    tech: [
+      "Next.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "NextAuth.js",
+      "Chart.js / Recharts",
+      "SheetJS / ExcelJS",
+      "@react-pdf/renderer / jsPDF",
+      "Node.js",
+      "PM2 / Nginx",
+      "Intranet / On-Premise",
+    ],
     image: "/images/pga-inventory.png",
     imageAlt: {
       en: "Dashboard of the PGA inventory request system",
@@ -204,37 +261,149 @@ export const projects: PortfolioProject[] = [
     },
     category: { en: "System development", id: "Pengembangan sistem" },
     summary: {
-      en: "A centralized platform for operational data, approvals, and reports across departments.",
-      id: "Platform terpusat untuk data operasional, approval, dan laporan lintas departemen.",
+      en: "A retail back-office platform that centralizes sales reporting, inventory workflows, store monitoring, and operational menus.",
+      id: "Platform back-office ritel yang memusatkan laporan penjualan, workflow inventaris, monitoring toko, dan menu operasional.",
     },
     contribution: {
-      en: "System architecture, database workflows, reporting, and operational reliability.",
-      id: "Arsitektur sistem, workflow database, reporting, dan keandalan operasional.",
+      en: "Interface development, server-side workflows, reporting modules, database integration, and operational maintenance.",
+      id: "Pengembangan antarmuka, workflow server, modul pelaporan, integrasi database, dan pemeliharaan operasional.",
     },
     detail: {
       en: [
-        "Teams across departments relied on scattered spreadsheets and repeated data entry. I designed a full-stack internal platform that centralizes role-based workflows, inventory tracking, and report generation.",
-        "The platform is accessed throughout the working day. Scheduled synchronization and fallback routines help keep data consistent when it connects with existing systems.",
+        "I developed this internal back-office platform to bring daily retail information into one operational interface. The home screen combines store status, issuing progress, sales values, and a real-time analog clock so the team can see key information without moving between separate tools.",
+        "The navigation organizes reporting and operational modules for member services, sales, pricing, promotions, receiving, stock issues, supplier documents, and monitoring. A dedicated login interface provides the entry point, while the reporting mega-menus make a large set of workflows easier to reach and manage.",
       ],
       id: [
-        "Tim lintas departemen mengandalkan spreadsheet yang tersebar dan input data berulang. Saya merancang platform internal full-stack yang memusatkan workflow berbasis peran, pelacakan inventaris, dan pembuatan laporan.",
-        "Platform diakses sepanjang hari kerja. Sinkronisasi terjadwal dan mekanisme fallback membantu menjaga konsistensi data saat terhubung dengan sistem yang sudah ada.",
+        "Saya mengembangkan platform back-office internal ini untuk menyatukan informasi operasional ritel harian dalam satu antarmuka. Halaman utama menggabungkan status toko, progres issuing, nilai penjualan, dan jam analog real-time agar tim dapat melihat informasi penting tanpa berpindah-pindah tools.",
+        "Navigasinya mengatur modul pelaporan dan operasional untuk member services, sales, harga, promosi, receiving, kendala stok, dokumen supplier, dan monitoring. Halaman login menjadi pintu masuk sistem, sedangkan mega-menu pelaporan memudahkan tim menjangkau dan mengelola banyak workflow dari satu tempat.",
       ],
     },
     impacts: {
-      en: ["Used across departments", "Accessed throughout the workday", "Operations in one platform", "Less repeated data processing"],
-      id: ["Digunakan lintas departemen", "Diakses sepanjang hari kerja", "Operasional dalam satu platform", "Mengurangi proses data berulang"],
+      en: ["Operational menus centralized", "Store status visible in real time", "Sales and inventory data in one interface", "Reporting workflows easier to access"],
+      id: ["Menu operasional terpusat", "Status toko terlihat real-time", "Data sales dan inventaris dalam satu antarmuka", "Workflow laporan lebih mudah diakses"],
     },
     impactLabels: {
-      en: ["Reach", "Usage", "Coverage", "Efficiency"],
-      id: ["Jangkauan", "Penggunaan", "Cakupan", "Efisiensi"],
+      en: ["Navigation", "Monitoring", "Data coverage", "Reporting"],
+      id: ["Navigasi", "Monitoring", "Cakupan data", "Pelaporan"],
     },
-    tech: ["PHP", "JavaScript", "SQL"],
-    image: "/images/internal-ops-concept.jpg",
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "Laravel / CodeIgniter", "MySQL / PostgreSQL"],
+    image: "/images/internal-ops/cover.jpeg",
     imageAlt: {
-      en: "Concept artwork representing connected operational systems",
-      id: "Artwork konsep yang menggambarkan sistem operasional terhubung",
+      en: "Inventory and receiving mega-menu on the internal retail operations platform",
+      id: "Mega-menu inventory dan receiving pada platform operasional internal ritel",
     },
-    conceptVisual: true,
+    gallery: [
+      {
+        src: "/images/internal-ops/login.jpeg",
+        alt: {
+          en: "Glassmorphism login screen for the internal operations platform",
+          id: "Halaman login glassmorphism untuk platform operasional internal",
+        },
+        caption: {
+          en: "Login interface with a custom glassmorphism panel layered over the retail illustration.",
+          id: "Antarmuka login dengan panel glassmorphism custom di atas ilustrasi ritel.",
+        },
+      },
+      {
+        src: "/images/internal-ops/dashboard.jpeg",
+        alt: {
+          en: "Home dashboard showing store status, issuing progress, and a real-time analog clock",
+          id: "Dashboard utama yang menampilkan status toko, progres issuing, dan jam analog real-time",
+        },
+        caption: {
+          en: "Operational home screen combining store metrics, issuing status, quick actions, and a synchronized analog clock.",
+          id: "Halaman utama operasional yang menggabungkan metrik toko, status issuing, aksi cepat, dan jam analog tersinkronisasi.",
+        },
+      },
+      {
+        src: "/images/internal-ops/reporting-menu.jpeg",
+        alt: {
+          en: "Reporting mega-menu containing sales, member, pricing, promotion, and information modules",
+          id: "Mega-menu pelaporan berisi modul sales, member, harga, promosi, dan informasi",
+        },
+        caption: {
+          en: "Reporting mega-menu that groups a large collection of sales, member, pricing, promotion, and monitoring tools.",
+          id: "Mega-menu pelaporan yang mengelompokkan berbagai tools sales, member, harga, promosi, dan monitoring.",
+        },
+      },
+    ],
+    techGroups: [
+      {
+        name: { en: "Frontend", id: "Frontend" },
+        items: [
+          {
+            name: "HTML, CSS, and JavaScript",
+            description: {
+              en: "Build the page structure, visual styling, and core interactions.",
+              id: "Membangun struktur halaman, tampilan visual, dan interaksi dasar.",
+            },
+          },
+          {
+            name: "Bootstrap",
+            description: {
+              en: "Provides the mega-menu navbar, data cards, buttons, and responsive interface components.",
+              id: "Digunakan untuk mega-menu navbar, cards data, tombol, dan komponen antarmuka responsif.",
+            },
+          },
+          {
+            name: "Custom CSS (Glassmorphism)",
+            description: {
+              en: "Creates the transparent login panel and blur effect with the backdrop-filter property.",
+              id: "Menerapkan panel login transparan dan efek blur menggunakan properti backdrop-filter.",
+            },
+          },
+          {
+            name: "JavaScript (Widget)",
+            description: {
+              en: "Uses DOM and canvas manipulation to keep the analog clock synchronized in real time.",
+              id: "Menggunakan manipulasi DOM dan canvas untuk menyinkronkan jam analog secara real-time.",
+            },
+          },
+        ],
+      },
+      {
+        name: { en: "Backend", id: "Backend" },
+        items: [
+          {
+            name: "PHP",
+            description: {
+              en: "Handles the dominant server-side logic for the retail back-office information system.",
+              id: "Menangani logika server utama untuk sistem informasi back-office ritel.",
+            },
+          },
+          {
+            name: "Framework (Laravel / CodeIgniter)",
+            description: {
+              en: "Applies an MVC architecture for application routing and complex reporting menus.",
+              id: "Menerapkan arsitektur MVC untuk routing aplikasi dan menu pelaporan yang kompleks.",
+            },
+          },
+        ],
+      },
+      {
+        name: { en: "Database", id: "Database" },
+        items: [
+          {
+            name: "RDBMS (MySQL / PostgreSQL)",
+            description: {
+              en: "Stores and processes relational data for sales aggregation, planograms, and large-scale stock movement.",
+              id: "Menyimpan dan mengolah data relasional untuk agregasi penjualan, planogram, dan pergerakan stok berskala besar.",
+            },
+          },
+        ],
+      },
+      {
+        name: { en: "Visual assets", id: "Aset visual" },
+        items: [
+          {
+            name: "Static 2D and isometric illustrations",
+            description: {
+              en: "Uses PNG, WebP, and SVG assets as layered backgrounds for dynamic HTML and CSS data elements.",
+              id: "Menggunakan aset PNG, WebP, dan SVG sebagai latar berlapis untuk elemen data HTML dan CSS yang dinamis.",
+            },
+          },
+        ],
+      },
+    ],
   },
 ];

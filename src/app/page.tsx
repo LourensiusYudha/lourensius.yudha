@@ -4,7 +4,6 @@ import { MotionEffects } from "@/components/MotionEffects";
 import { ProjectShowcase } from "@/components/ProjectShowcase";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SmoothScroll } from "@/components/SmoothScroll";
-import "./portfolio.css";
 
 const capabilities = [
   {
