@@ -64,7 +64,7 @@ export const portfolioHtml = `
 
     <div class="hero-bottom anim-6">
       <p class="hero-desc" id="about" data-i18n="hero.desc">
-        IT professional focused on SQL database systems, operational tooling, and retail technology. Building internal systems and automations that solve real business problems and improve daily operations.
+        IT professional focused on SQL database systems, operational tooling, and retail technology. Building operational systems and automations that solve real business problems and improve daily operations.
       </p>
       <div class="hero-actions anim-7">
         <a href="/files/CV-Yudha.pdf" class="btn-primary" download>
@@ -91,7 +91,7 @@ export const portfolioHtml = `
       <div class="sec-head-body">
         <span class="sec-eyebrow" data-i18n="projects.eyebrow">Work</span>
         <h2 class="sec-title" data-i18n="projects.heading">Projects</h2>
-        <p class="sec-sub" data-i18n="projects.sub">Systems shipped for retail ops, inventory, and internal tools.</p>
+        <p class="sec-sub" data-i18n="projects.sub">Systems shipped for retail ops, inventory, and operational tools.</p>
       </div>
       <div class="sec-rule" aria-hidden="true"></div>
     </header>
@@ -149,14 +149,14 @@ export const portfolioHtml = `
           <span class="case-item-title" data-i18n="projects.p5t">PGA Inventory Request System</span>
           <span class="case-item-meta">PHP · PostgreSQL · JavaScript</span>
         </div>
-        <img src="/images/pga-inventory.png" alt="" class="case-item-preview" width="120" height="72">
+        <img src="/images/pga-inventory-banner.webp" alt="" class="case-item-preview" width="120" height="72">
         <span class="case-item-arrow" aria-hidden="true">→</span>
       </button>
       <button type="button" class="case-item reveal delay-2" data-project-index="5">
         <span class="case-item-num">06</span>
         <div class="case-item-main">
           <span class="case-item-tag" data-i18n="projects.badge6">Web Dev</span>
-          <span class="case-item-title" data-i18n="projects.p6t">Internal Operational Website</span>
+          <span class="case-item-title" data-i18n="projects.p6t">Operations Platform</span>
           <span class="case-item-meta">PHP · JavaScript · SQL</span>
         </div>
         <span class="case-item-arrow" aria-hidden="true">→</span>
@@ -258,7 +258,7 @@ export const portfolioHtml = `
           <p class="exp-entry-company" data-i18n="experience.company1">Retail Operations Division</p>
           <ul class="exp-entry-list">
             <li data-i18n="experience.desc1a">Advanced SQL data analysis and business intelligence reporting</li>
-            <li data-i18n="experience.desc1b">Internal system development and maintenance</li>
+            <li data-i18n="experience.desc1b">Operational system development and maintenance</li>
             <li data-i18n="experience.desc1c">Operational reporting automation and workflow optimization</li>
             <li data-i18n="experience.desc1d">Automation tool development for monitoring and alerts</li>
             <li data-i18n="experience.desc1e">IT support for retail branch expansion projects</li>
@@ -279,7 +279,7 @@ export const portfolioHtml = `
           </div>
           <p class="exp-entry-company" data-i18n="experience.company2">IT Department</p>
           <ul class="exp-entry-list">
-            <li data-i18n="experience.desc2a">Developed and maintained internal web applications</li>
+            <li data-i18n="experience.desc2a">Developed and maintained operational web applications</li>
             <li data-i18n="experience.desc2b">Assisted in database schema design and query optimization</li>
             <li data-i18n="experience.desc2c">Participated in testing cycles and technical documentation</li>
           </ul>

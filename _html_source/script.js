@@ -19,9 +19,9 @@ const i18n = {
       eyebrow: "// 01 — About",
       title: "About", accent: "Me",
       p1: "I'm an IT professional with a deep focus on <strong>SQL database systems</strong>, <strong>operational system development</strong>, and <strong>retail technology solutions</strong>. I don't just write code — I build tools that solve real business problems.",
-      p2: "My experience spans from crafting complex SQL queries for business intelligence, to developing full internal web systems, to automating reporting workflows that save hours of manual work every week.",
+      p2: "My experience spans from crafting complex SQL queries for business intelligence, to developing full operational web systems, to automating reporting workflows that save hours of manual work every week.",
       p3: "Working inside retail environments has given me a practical understanding of how technology decisions impact day-to-day operations — from store openings to inventory tracking to executive reporting.",
-      tag1: "SQL Architecture", tag2: "Internal Systems", tag3: "Retail Operations",
+      tag1: "SQL Architecture", tag2: "Operational Systems", tag3: "Retail Operations",
       tag4: "Process Automation", tag5: "Data Analysis", tag6: "Web Development",
       filename: "profile.json",
       jName: '"Lourensius Yudha K."',
@@ -49,8 +49,8 @@ const i18n = {
       p1i2: "Ensured operational stability on opening day",
       p1i3: "Maintained system uptime throughout event",
       p1l: "View Details →",
-      p2t: "Internal Operational Website",
-      p2d: "Full-stack internal web application providing operations teams with real-time access to workflows, inventory data, and reporting dashboards.",
+      p2t: "Operations Platform",
+      p2d: "Full-stack operational web application providing operations teams with real-time access to workflows, inventory data, and reporting dashboards.",
       p2i1: "Improved operational workflow efficiency",
       p2i2: "Reduced manual data processing",
       p2l: "View Details →",
@@ -73,14 +73,14 @@ const i18n = {
       company1: "Retail Operations Division",
       type: "Full-time",
       desc1a: "Advanced SQL data analysis and business intelligence reporting",
-      desc1b: "Internal system development and maintenance",
+      desc1b: "Operational system development and maintenance",
       desc1c: "Operational reporting automation and workflow optimization",
       desc1d: "Automation tool development for monitoring and alerts",
       desc1e: "IT support for retail branch expansion projects",
       desc1f: "System preparation for new store grand openings",
       role2: "Junior Web Developer",
       company2: "IT Department",
-      desc2a: "Developed and maintained internal web applications",
+      desc2a: "Developed and maintained operational web applications",
       desc2b: "Assisted in database schema design and query optimization",
       desc2c: "Participated in testing cycles and technical documentation",
       present: "Present"
@@ -137,9 +137,9 @@ const i18n = {
       eyebrow: "// 01 — Tentang",
       title: "Tentang", accent: "Saya",
       p1: "Saya seorang profesional IT dengan fokus mendalam pada <strong>sistem database SQL</strong>, <strong>pengembangan sistem operasional</strong>, dan <strong>solusi teknologi ritel</strong>. Saya tidak hanya menulis kode — saya membangun alat yang memecahkan masalah bisnis nyata.",
-      p2: "Pengalaman saya mencakup pembuatan query SQL kompleks untuk business intelligence, pengembangan sistem web internal, hingga otomatisasi pelaporan yang menghemat jam kerja manual setiap minggu.",
+      p2: "Pengalaman saya mencakup pembuatan query SQL kompleks untuk business intelligence, pengembangan sistem web operasional, hingga otomatisasi pelaporan yang menghemat jam kerja manual setiap minggu.",
       p3: "Bekerja di lingkungan ritel memberi saya pemahaman praktis tentang bagaimana keputusan teknologi berdampak pada operasi sehari-hari — dari pembukaan toko hingga pelacakan inventaris dan pelaporan eksekutif.",
-      tag1: "Arsitektur SQL", tag2: "Sistem Internal", tag3: "Operasi Ritel",
+      tag1: "Arsitektur SQL", tag2: "Sistem Operasional", tag3: "Operasi Ritel",
       tag4: "Otomatisasi Proses", tag5: "Analisis Data", tag6: "Web Development",
       filename: "profile.json",
       jName: '"Lourensius Yudha K."',
@@ -167,8 +167,8 @@ const i18n = {
       p1i2: "Memastikan stabilitas operasional pada hari pembukaan",
       p1i3: "Menjaga uptime sistem selama acara",
       p1l: "Lihat Detail →",
-      p2t: "Website Operasional Internal",
-      p2d: "Aplikasi web full-stack internal yang memberikan tim operasional akses real-time ke alur kerja, data inventaris, dan dashboard pelaporan.",
+      p2t: "Platform Operasional",
+      p2d: "Aplikasi web full-stack operational yang memberikan tim operasional akses real-time ke alur kerja, data inventaris, dan dashboard pelaporan.",
       p2i1: "Meningkatkan efisiensi alur kerja operasional",
       p2i2: "Mengurangi pemrosesan data manual",
       p2l: "Lihat Detail →",
@@ -191,14 +191,14 @@ const i18n = {
       company1: "Divisi Operasi Ritel",
       type: "Penuh Waktu",
       desc1a: "Analisis data SQL lanjutan dan pelaporan business intelligence",
-      desc1b: "Pengembangan dan pemeliharaan sistem internal",
+      desc1b: "Pengembangan dan pemeliharaan sistem operasional",
       desc1c: "Otomatisasi pelaporan operasional dan optimalisasi alur kerja",
       desc1d: "Pengembangan alat otomatisasi untuk monitoring dan alert",
       desc1e: "Dukungan IT untuk proyek ekspansi cabang ritel",
       desc1f: "Persiapan sistem untuk grand opening toko baru",
       role2: "Junior Web Developer",
       company2: "Departemen IT",
-      desc2a: "Mengembangkan dan memelihara aplikasi web internal",
+      desc2a: "Mengembangkan dan memelihara aplikasi web operasional",
       desc2b: "Membantu desain skema database dan optimalisasi query",
       desc2c: "Berpartisipasi dalam siklus pengujian dan dokumentasi teknis",
       present: "Sekarang"
@@ -648,10 +648,10 @@ const projectData = [
   },
   {
     en: {
-      title: "Internal Operational Website",
+      title: "Operations Platform",
       badge: "Web Dev",
       tech: ["PHP", "JavaScript", "SQL", "HTML/CSS"],
-      full: `<p>The operations team relied on scattered spreadsheets and manual data entry to track inventory, workflows, and reporting — a process that was error-prone and time-consuming. I designed and built a full-stack internal web application to centralize these operations into a single, real-time platform.</p>
+      full: `<p>The operations team relied on scattered spreadsheets and manual data entry to track inventory, workflows, and reporting — a process that was error-prone and time-consuming. I designed and built a full-stack operational web application to centralize these operations into a single, real-time platform.</p>
 <p>The system features role-based dashboards for different teams, live inventory tracking, workflow management with approval stages, and automated report generation. Built with PHP and JavaScript on the front-end, with an SQL database powering the back-end, the application serves hundreds of daily users across multiple departments.</p>
 <p>One of the key challenges was integrating with existing legacy systems while maintaining data consistency. I implemented scheduled synchronization routines and built fallback mechanisms to ensure the platform remained reliable even when external systems were unavailable.</p>`,
       impacts: [
@@ -660,10 +660,10 @@ const projectData = [
       ]
     },
     id: {
-      title: "Website Operasional Internal",
+      title: "Platform Operasional",
       badge: "Web Dev",
       tech: ["PHP", "JavaScript", "SQL", "HTML/CSS"],
-      full: `<p>Tim operasi sebelumnya mengandalkan spreadsheet yang tersebar dan entri data manual untuk melacak inventaris, alur kerja, dan pelaporan — sebuah proses yang rentan error dan memakan waktu. Saya merancang dan membangun aplikasi web internal full-stack untuk memusatkan operasi ini ke dalam satu platform real-time.</p>
+      full: `<p>Tim operasi sebelumnya mengandalkan spreadsheet yang tersebar dan entri data manual untuk melacak inventaris, alur kerja, dan pelaporan — sebuah proses yang rentan error dan memakan waktu. Saya merancang dan membangun aplikasi web operasional full-stack untuk memusatkan operasi ini ke dalam satu platform real-time.</p>
 <p>Sistem ini memiliki dashboard berbasis peran untuk tim yang berbeda, pelacakan inventaris langsung, manajemen alur kerja dengan tahap persetujuan, dan pembuatan laporan otomatis. Dibangun dengan PHP dan JavaScript di front-end, dengan database SQL sebagai back-end, aplikasi ini melayani ratusan pengguna harian di berbagai departemen.</p>
 <p>Salah satu tantangan utama adalah integrasi dengan sistem lawas yang sudah ada sambil menjaga konsistensi data. Saya mengimplementasikan rutinitas sinkronisasi terjadwal dan membangun mekanisme fallback untuk memastikan platform tetap andal bahkan ketika sistem eksternal tidak tersedia.</p>`,
       impacts: [

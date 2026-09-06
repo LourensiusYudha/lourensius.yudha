@@ -19,9 +19,10 @@ const fira = Fira_Code({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lourensiusyudha.my.id"),
-  title: "Lourensius Yudha Kristianto | IT Developer, Support and Infrastructure",
+  applicationName: "LYK Portfolio",
+  title: "Lourensius Yudha | Operational Systems Developer",
   description:
-    "Portfolio of Lourensius Yudha Kristianto, an IT Developer and Support professional open to remote roles and selected international projects.",
+    "Explore Lourensius Yudha's experience in operational systems, SQL reporting, IT support, and retail infrastructure. View case studies and download his CV.",
   keywords: [
     "IT Developer",
     "IT Support",
@@ -34,16 +35,29 @@ export const metadata: Metadata = {
   authors: [{ name: "Lourensius Yudha Kristianto" }],
   creator: "Lourensius Yudha Kristianto",
   alternates: { canonical: "/" },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Lourensius Yudha Kristianto | IT Developer",
-    description: "IT development, support, infrastructure, database systems, and operational automation.",
+    title: "Lourensius Yudha | Operational Systems Developer",
+    description: "Career portfolio: operational systems, reporting automation, and hands-on IT operations. Explore experience, project contributions, and CV.",
     type: "website",
+    url: "/",
+    siteName: "Lourensius Yudha Portfolio",
+    locale: "en_US",
   },
   twitter: {
-    card: "summary",
-    title: "Lourensius Yudha Kristianto | IT Developer",
-    description: "IT development, support, infrastructure, database systems, and operational automation.",
+    card: "summary_large_image",
+    title: "Lourensius Yudha | Operational Systems Developer",
+    description: "Career portfolio: operational systems, reporting automation, and hands-on IT operations. Explore experience, project contributions, and CV.",
   },
 };
 

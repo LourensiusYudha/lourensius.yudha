@@ -14,7 +14,7 @@ const i18n = {
       label: "IT Operation & Systems Developer",
       role: "System Developer & Database Specialist",
       loc: "Surabaya, Indonesia",
-      desc: "IT professional focused on SQL database systems, operational tooling, and retail technology. Building internal systems and automations that solve real business problems and improve daily operations.",
+      desc: "IT professional focused on SQL database systems, operational tooling, and retail technology. Building operational systems and automations that solve real business problems and improve daily operations.",
       stat1: "Experience", stat2: "Projects", stat3: "Issues", stat4: "Databases",
       scroll: "Scroll"
     },
@@ -28,7 +28,7 @@ const i18n = {
       c1t: "Database",
       c1d: "Designing, querying, and maintaining SQL systems that power reporting, inventory, and daily business decisions.",
       c2t: "Frontend",
-      c2d: "Crafting clear, responsive interfaces for internal tools that help teams move faster day to day.",
+      c2d: "Crafting clear, responsive interfaces for operational tools that help teams move faster day to day.",
       c3t: "Backend",
       c3d: "Building server-side logic, APIs, and data flows that keep operational systems reliable.",
       c4t: "Mobile Development",
@@ -42,7 +42,7 @@ const i18n = {
       eyebrow: "Work",
       heading: "Projects",
       title: "Showcase of my", accent: "Project",
-      sub: "Systems shipped for retail ops, inventory, and internal tools.",
+      sub: "Systems shipped for retail ops, inventory, and operational tools.",
       p1t: "Grand Opening, Gorontalo Branch",
       p1d: "Led end-to-end IT readiness for a new retail branch (POS, network, and inventory systems) and kept operations online from first door open to closing bell.",
       p1i1: "Branch systems live before day one",
@@ -69,8 +69,8 @@ const i18n = {
       p5i1: "Faster request-to-approval cycle",
       p5i2: "Full visibility across teams",
       p5l: "See the Request Flow →",
-      p6t: "Internal Operational Website",
-      p6d: "Full-stack internal portal for workflows, inventory visibility, and reporting dashboards. One place for ops teams to work in real time.",
+      p6t: "Operations Platform",
+      p6d: "Full-stack operations portal for workflows, inventory visibility, and reporting dashboards. One place for ops teams to work in real time.",
       p6i1: "Improved operational workflow efficiency",
       p6i2: "Reduced manual data processing",
       p6l: "See the Ops Portal →",
@@ -85,14 +85,14 @@ const i18n = {
       company1: "Retail Operations Division",
       type: "Full-time",
       desc1a: "Advanced SQL data analysis and business intelligence reporting",
-      desc1b: "Internal system development and maintenance",
+      desc1b: "Operational system development and maintenance",
       desc1c: "Operational reporting automation and workflow optimization",
       desc1d: "Automation tool development for monitoring and alerts",
       desc1e: "IT support for retail branch expansion projects",
       desc1f: "System preparation for new store grand openings",
       role2: "Junior Web Developer",
       company2: "IT Department",
-      desc2a: "Developed and maintained internal web applications",
+      desc2a: "Developed and maintained operational web applications",
       desc2b: "Assisted in database schema design and query optimization",
       desc2c: "Participated in testing cycles and technical documentation",
       present: "Present"
@@ -145,7 +145,7 @@ const i18n = {
       label: "IT Operation & Systems Developer",
       role: "System Developer & Database Specialist",
       loc: "Surabaya, Indonesia",
-      desc: "Profesional IT dengan fokus pada sistem database SQL, tooling operasional, dan teknologi ritel. Membangun sistem internal dan otomatisasi yang memecahkan masalah bisnis nyata serta meningkatkan operasional harian.",
+      desc: "Profesional IT dengan fokus pada sistem database SQL, tooling operasional, dan teknologi ritel. Membangun sistem operasional dan otomatisasi yang memecahkan masalah bisnis nyata serta meningkatkan operasional harian.",
       stat1: "Pengalaman", stat2: "Proyek", stat3: "Issues", stat4: "Database",
       scroll: "Gulir"
     },
@@ -159,7 +159,7 @@ const i18n = {
       c1t: "Database",
       c1d: "Merancang, query, dan merawat sistem SQL yang mendukung pelaporan, inventaris, serta keputusan bisnis harian.",
       c2t: "Frontend",
-      c2d: "Membangun antarmuka responsif yang jelas untuk tools internal agar tim bergerak lebih cepat setiap hari.",
+      c2d: "Membangun antarmuka responsif yang jelas untuk tools operasional agar tim bergerak lebih cepat setiap hari.",
       c3t: "Backend",
       c3d: "Membangun logika server, API, dan aliran data supaya sistem operasional tetap andal.",
       c4t: "Mobile Development",
@@ -173,7 +173,7 @@ const i18n = {
       eyebrow: "Karya",
       heading: "Projects",
       title: "Showcase of my", accent: "Project",
-      sub: "Sistem untuk operasional ritel, inventaris, dan tools internal.",
+      sub: "Sistem untuk operasional ritel, inventaris, dan tools operasional.",
       p1t: "Grand Opening, Cabang Gorontalo",
       p1d: "Memimpin kesiapan IT end-to-end untuk cabang ritel baru (POS, jaringan, dan sistem inventaris) serta menjaga operasi online dari pintu dibuka sampai tutup.",
       p1i1: "Sistem cabang siap sebelum hari pertama",
@@ -200,8 +200,8 @@ const i18n = {
       p5i1: "Siklus permintaan-ke-approval lebih cepat",
       p5i2: "Visibilitas penuh lintas tim",
       p5l: "Lihat Alur Permintaan →",
-      p6t: "Website Operasional Internal",
-      p6d: "Portal internal full-stack untuk alur kerja, visibilitas inventaris, dan dashboard laporan. Satu tempat untuk tim ops bekerja secara real-time.",
+      p6t: "Platform Operasional",
+      p6d: "Portal operasional full-stack untuk alur kerja, visibilitas inventaris, dan dashboard laporan. Satu tempat untuk tim ops bekerja secara real-time.",
       p6i1: "Meningkatkan efisiensi alur kerja operasional",
       p6i2: "Mengurangi pemrosesan data manual",
       p6l: "Lihat Portal Ops →",
@@ -216,14 +216,14 @@ const i18n = {
       company1: "Divisi Operasi Ritel",
       type: "Penuh Waktu",
       desc1a: "Analisis data SQL lanjutan dan pelaporan business intelligence",
-      desc1b: "Pengembangan dan pemeliharaan sistem internal",
+      desc1b: "Pengembangan dan pemeliharaan sistem operasional",
       desc1c: "Otomatisasi pelaporan operasional dan optimalisasi alur kerja",
       desc1d: "Pengembangan alat otomatisasi untuk monitoring dan alert",
       desc1e: "Dukungan IT untuk proyek ekspansi cabang ritel",
       desc1f: "Persiapan sistem untuk grand opening toko baru",
       role2: "Junior Web Developer",
       company2: "Departemen IT",
-      desc2a: "Mengembangkan dan memelihara aplikasi web internal",
+      desc2a: "Mengembangkan dan memelihara aplikasi web operasional",
       desc2b: "Membantu desain skema database dan optimalisasi query",
       desc2c: "Berpartisipasi dalam siklus pengujian dan dokumentasi teknis",
       present: "Sekarang"
@@ -959,15 +959,15 @@ const projectData = [
         "Visibilitas penuh lintas tim"
       ]
     },
-    images: ["/images/pga-inventory.png"]
+    images: ["/images/pga-inventory-banner.webp"]
   },
-  // 5 — Internal Operational Website
+  // 5 — Operations Platform
   {
     en: {
-      title: "Internal Operational Website",
+      title: "Operations Platform",
       badge: "Web Dev",
       tech: ["PHP", "JavaScript", "SQL", "HTML/CSS"],
-      full: `<p>The operations team relied on scattered spreadsheets and manual data entry to track inventory, workflows, and reporting — a process that was error-prone and time-consuming. I designed and built a full-stack internal web application to centralize these operations into a single, real-time platform.</p>
+      full: `<p>The operations team relied on scattered spreadsheets and manual data entry to track inventory, workflows, and reporting — a process that was error-prone and time-consuming. I designed and built a full-stack operational web application to centralize these operations into a single, real-time platform.</p>
 <p>The system features role-based dashboards for different teams, live inventory tracking, workflow management with approval stages, and automated report generation. Built with PHP and JavaScript on the front-end, with an SQL database powering the back-end, the application serves hundreds of daily users across multiple departments.</p>
 <p>One of the key challenges was integrating with existing legacy systems while maintaining data consistency. I implemented scheduled synchronization routines and built fallback mechanisms to ensure the platform remained reliable even when external systems were unavailable.</p>`,
       impacts: [
@@ -976,10 +976,10 @@ const projectData = [
       ]
     },
     id: {
-      title: "Website Operasional Internal",
+      title: "Platform Operasional",
       badge: "Web Dev",
       tech: ["PHP", "JavaScript", "SQL", "HTML/CSS"],
-      full: `<p>Tim operasi sebelumnya mengandalkan spreadsheet yang tersebar dan entri data manual untuk melacak inventaris, alur kerja, dan pelaporan — sebuah proses yang rentan error dan memakan waktu. Saya merancang dan membangun aplikasi web internal full-stack untuk memusatkan operasi ini ke dalam satu platform real-time.</p>
+      full: `<p>Tim operasi sebelumnya mengandalkan spreadsheet yang tersebar dan entri data manual untuk melacak inventaris, alur kerja, dan pelaporan — sebuah proses yang rentan error dan memakan waktu. Saya merancang dan membangun aplikasi web operasional full-stack untuk memusatkan operasi ini ke dalam satu platform real-time.</p>
 <p>Sistem ini memiliki dashboard berbasis peran untuk tim yang berbeda, pelacakan inventaris langsung, manajemen alur kerja dengan tahap persetujuan, dan pembuatan laporan otomatis. Dibangun dengan PHP dan JavaScript di front-end, dengan database SQL sebagai back-end, aplikasi ini melayani ratusan pengguna harian di berbagai departemen.</p>
 <p>Salah satu tantangan utama adalah integrasi dengan sistem lawas yang sudah ada sambil menjaga konsistensi data. Saya mengimplementasikan rutinitas sinkronisasi terjadwal dan membangun mekanisme fallback untuk memastikan platform tetap andal bahkan ketika sistem eksternal tidak tersedia.</p>`,
       impacts: [

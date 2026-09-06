@@ -1,16 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BilingualText } from "@/components/BilingualText";
 import { MotionEffects } from "@/components/MotionEffects";
 import { ProjectShowcase } from "@/components/ProjectShowcase";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { StructuredData } from "@/components/StructuredData";
+import { experiences } from "@/lib/experience-data";
 
 const capabilities = [
   {
     name: { en: "IT systems development", id: "Pengembangan sistem IT" },
     description: {
-      en: "Internal and inventory systems built around the way teams actually work.",
-      id: "Sistem internal dan inventaris yang dibangun mengikuti cara kerja tim sehari-hari.",
+      en: "Operational and inventory systems built around the way teams actually work.",
+      id: "Sistem operasional dan inventaris yang dibangun mengikuti cara kerja tim sehari-hari.",
     },
     tools: "PHP, Laravel, JavaScript, TypeScript, React, Next.js",
   },
@@ -42,11 +45,90 @@ const capabilities = [
 
 const stack = ["IT Support", "Windows", "Network Operations", "MySQL", "PHP", "Laravel", "Oracle", "Next.js"];
 
+const homeStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://lourensiusyudha.my.id/#person",
+      name: "Lourensius Yudha Kristianto",
+      url: "https://lourensiusyudha.my.id/",
+      image: "https://lourensiusyudha.my.id/images/yudha.jpeg",
+      jobTitle: "Operational Systems Developer",
+      email: "mailto:lourensius.yudha@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Surabaya",
+        addressCountry: "ID",
+      },
+      knowsLanguage: ["English", "Indonesian"],
+      knowsAbout: [
+        "Operational systems development",
+        "Inventory systems",
+        "Reporting automation",
+        "Database operations",
+        "IT support",
+        "IT infrastructure",
+      ],
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "SQL (Advanced)",
+          credentialCategory: "Skill certification",
+          dateCreated: "2026-08-13",
+          url: "https://www.hackerrank.com/certificates/iframe/2023e2c94d6c",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "HackerRank",
+            url: "https://www.hackerrank.com/",
+          },
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "CSS (Basic)",
+          credentialCategory: "Skill certification",
+          dateCreated: "2026-09-06",
+          url: "https://www.hackerrank.com/certificates/iframe/b4ea36918028",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "HackerRank",
+            url: "https://www.hackerrank.com/",
+          },
+        },
+      ],
+      sameAs: ["https://www.linkedin.com/in/lourensius-yudha/"],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://lourensiusyudha.my.id/#service",
+      name: "Lourensius Yudha IT Development Services",
+      url: "https://lourensiusyudha.my.id/services/",
+      image: "https://lourensiusyudha.my.id/images/hero-yudha-coding-v2.webp",
+      description: "Operational systems, reporting automation, public websites, IT support, and infrastructure services for business teams.",
+      founder: { "@id": "https://lourensiusyudha.my.id/#person" },
+      areaServed: "Worldwide",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Surabaya",
+        addressCountry: "ID",
+      },
+      serviceType: [
+        "Operational systems development",
+        "Inventory workflow development",
+        "Reporting automation",
+        "Public website development",
+        "IT support and infrastructure",
+      ],
+    },
+  ],
+};
+
 export default function HomePage() {
   return (
     <SmoothScroll>
+      <StructuredData data={homeStructuredData} />
       <SiteHeader />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <section className="hero" id="home">
           <Image
             className="hero-background"
@@ -62,8 +144,8 @@ export default function HomePage() {
             <BilingualText
               as="p"
               className="hero-intro"
-              en="IT Development, Support and Infrastructure"
-              id="IT Development, Support dan Infrastruktur"
+              en="Lourensius Yudha"
+              id="Lourensius Yudha"
             />
             <h1 className="hero-title">
               <span className="hero-title-main">systems</span>
@@ -72,26 +154,30 @@ export default function HomePage() {
             <BilingualText
               as="p"
               className="hero-summary"
-              en="I build reliable systems, support IT operations, and solve the problems that keep teams from moving."
-              id="Saya membangun sistem andal, mendukung operasional IT, dan menyelesaikan masalah yang menghambat kerja tim."
+              en="I develop operational systems and reporting automation, backed by hands-on experience in IT support, databases, and retail infrastructure."
+              id="Saya mengembangkan sistem operasional dan otomatisasi laporan, didukung pengalaman langsung dalam IT support, database, dan infrastruktur ritel."
             />
             <div className="hero-actions">
-              <a className="button button-primary" href="#work">
-                <span className="lang-copy lang-en">View case studies</span>
-                <span className="lang-copy lang-id">Lihat studi kasus</span>
+              <a className="button button-primary" href="#experience">
+                <span className="lang-copy lang-en">View experience</span>
+                <span className="lang-copy lang-id">Lihat pengalaman</span>
               </a>
               <a className="button button-secondary" href="/files/CV-Yudha.pdf" download>
                 <span className="lang-copy lang-en">Download CV</span>
                 <span className="lang-copy lang-id">Unduh CV</span>
               </a>
             </div>
+            <Link className="hero-services-link" href="/services/">
+              <span className="lang-copy lang-en">Need project support? View services →</span>
+              <span className="lang-copy lang-id">Butuh bantuan project? Lihat layanan →</span>
+            </Link>
           </div>
 
           <div className="hero-meta">
             <span className="hero-status">
               <span aria-hidden="true" />
-              <span className="lang-copy lang-en">Open to remote IT roles and selected freelance work</span>
-              <span className="lang-copy lang-id">Terbuka untuk posisi IT remote dan freelance terpilih</span>
+              <span className="lang-copy lang-en">Open to remote systems development and IT roles</span>
+              <span className="lang-copy lang-id">Terbuka untuk posisi pengembangan sistem dan IT remote</span>
             </span>
             <BilingualText className="hero-location" en="Surabaya, Indonesia" id="Surabaya, Indonesia" />
           </div>
@@ -146,8 +232,8 @@ export default function HomePage() {
               <div className="about-story reveal">
                 <BilingualText
                   as="p"
-                  en="My work sits between development, IT support, infrastructure, data, and frontline operations. That range helps me understand both the system and the people who depend on it."
-                  id="Pekerjaan saya berada di antara development, IT support, infrastruktur, data, dan operasional lapangan. Pengalaman ini membantu saya memahami sistem sekaligus orang yang mengandalkannya."
+                  en="I develop systems for daily operations: inventory tracking, request approvals, and automated reporting. My experience supporting retail teams helps me connect software decisions with real user needs."
+                  id="Saya mengembangkan sistem untuk operasional harian: pencatatan inventaris, persetujuan permintaan, dan laporan otomatis. Pengalaman mendukung tim ritel membantu saya menghubungkan keputusan pengembangan dengan kebutuhan nyata pengguna."
                 />
                 <BilingualText
                   as="p"
@@ -156,11 +242,160 @@ export default function HomePage() {
                 />
                 <div className="about-facts">
                   <div><strong>2023</strong><BilingualText en="Career started" id="Awal karier" /></div>
-                  <div><strong>06</strong><BilingualText en="Selected builds" id="Karya terpilih" /></div>
+                  <div><strong>07</strong><BilingualText en="Selected builds" id="Karya terpilih" /></div>
                   <div><strong>03</strong><BilingualText en="Core IT disciplines" id="Bidang utama IT" /></div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="experience section-pad" id="experience">
+          <div className="section-shell experience-layout">
+            <div className="experience-intro reveal">
+              <BilingualText as="h2" en="Experience" id="Pengalaman" />
+              <BilingualText
+                as="p"
+                en="A path from web products to the operational systems behind them."
+                id="Perjalanan dari produk web menuju sistem operasional di belakangnya."
+              />
+            </div>
+            <div className="experience-list">
+              {experiences.map((experience) => (
+                <Link
+                  className="experience-item reveal"
+                  href={`/experience/${experience.slug}/`}
+                  key={experience.slug}
+                  aria-label={`Read experience details: ${experience.title.en}`}
+                >
+                  <BilingualText className="experience-date" {...experience.period} />
+                  <div className="experience-body">
+                    <BilingualText as="h3" {...experience.title} />
+                    <BilingualText as="p" className="experience-company" {...experience.company} />
+                    <BilingualText as="p" className="experience-location" {...experience.location} />
+                    <BilingualText as="p" {...experience.summary} />
+                    <span className="experience-action">
+                      <span className="lang-copy lang-en">View job description</span>
+                      <span className="lang-copy lang-id">Lihat jobdesk</span>
+                      <span aria-hidden="true">→</span>
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="certifications section-pad" id="certifications">
+          <div className="section-shell">
+            <div className="section-heading reveal">
+              <BilingualText as="h2" en="Certification" id="Sertifikasi" />
+              <BilingualText
+                as="p"
+                en="Verified credentials supporting my work across data, SQL, and front-end development."
+                id="Kredensial terverifikasi yang mendukung pekerjaan saya dalam bidang data, SQL, dan pengembangan front-end."
+              />
+            </div>
+
+            <article className="certificate-card reveal">
+              <a
+                className="certificate-preview"
+                href="https://www.hackerrank.com/certificates/iframe/2023e2c94d6c"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Verify HackerRank SQL Advanced certificate"
+              >
+                <Image
+                  src="/images/certificates/sql-advanced-hackerrank.png"
+                  alt="HackerRank SQL Advanced certificate awarded to Lourensius Yudha Kristianto"
+                  fill
+                  sizes="(max-width: 760px) calc(100vw - 32px), 58vw"
+                />
+              </a>
+
+              <div className="certificate-content">
+                <BilingualText className="certificate-issuer" en="HackerRank · Verified credential" id="HackerRank · Kredensial terverifikasi" />
+                <h3>SQL (Advanced)</h3>
+                <BilingualText
+                  as="p"
+                  className="certificate-description"
+                  en="Passed the HackerRank skill certification test for advanced SQL."
+                  id="Lulus uji sertifikasi keahlian HackerRank untuk SQL tingkat lanjut."
+                />
+                <dl className="certificate-meta">
+                  <div>
+                    <dt>
+                      <span className="lang-copy lang-en">Issued</span>
+                      <span className="lang-copy lang-id">Diterbitkan</span>
+                    </dt>
+                    <dd>13 Aug 2026</dd>
+                  </div>
+                  <div>
+                    <dt>
+                      <span className="lang-copy lang-en">Credential ID</span>
+                      <span className="lang-copy lang-id">ID kredensial</span>
+                    </dt>
+                    <dd>2023E2C94D6C</dd>
+                  </div>
+                </dl>
+                <div className="certificate-actions">
+                  <a href="https://www.hackerrank.com/certificates/iframe/2023e2c94d6c" target="_blank" rel="noreferrer">
+                    <span className="lang-copy lang-en">Verify credential ↗</span>
+                    <span className="lang-copy lang-id">Verifikasi kredensial ↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article className="certificate-card reveal">
+              <a
+                className="certificate-preview"
+                href="https://www.hackerrank.com/certificates/iframe/b4ea36918028"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Verify HackerRank CSS Basic certificate"
+              >
+                <Image
+                  src="/images/certificates/css-basic-hackerrank.png"
+                  alt="HackerRank CSS Basic certificate awarded to Lourensius Yudha Kristianto"
+                  fill
+                  sizes="(max-width: 760px) calc(100vw - 32px), 58vw"
+                />
+              </a>
+
+              <div className="certificate-content">
+                <BilingualText className="certificate-issuer" en="HackerRank · Verified credential" id="HackerRank · Kredensial terverifikasi" />
+                <h3>CSS (Basic)</h3>
+                <BilingualText
+                  as="p"
+                  className="certificate-description"
+                  en="Passed the HackerRank skill certification test for foundational CSS."
+                  id="Lulus uji sertifikasi keahlian HackerRank untuk fundamental CSS."
+                />
+                <dl className="certificate-meta">
+                  <div>
+                    <dt>
+                      <span className="lang-copy lang-en">Issued</span>
+                      <span className="lang-copy lang-id">Diterbitkan</span>
+                    </dt>
+                    <dd>06 Sep 2026</dd>
+                  </div>
+                  <div>
+                    <dt>
+                      <span className="lang-copy lang-en">Credential ID</span>
+                      <span className="lang-copy lang-id">ID kredensial</span>
+                    </dt>
+                    <dd>B4EA36918028</dd>
+                  </div>
+                </dl>
+                <div className="certificate-actions">
+                  <a href="https://www.hackerrank.com/certificates/iframe/b4ea36918028" target="_blank" rel="noreferrer">
+                    <span className="lang-copy lang-en">Verify credential ↗</span>
+                    <span className="lang-copy lang-id">Verifikasi kredensial ↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -207,8 +442,8 @@ export default function HomePage() {
               <BilingualText as="h2" en="Ways I contribute" id="Kontribusi yang saya bawa" />
               <BilingualText
                 as="p"
-                en="Full-time capability across development, support, and infrastructure, plus selected systems and website projects."
-                id="Kemampuan full-time dalam development, support, dan infrastruktur, serta project sistem dan website terpilih."
+                en="Operational systems development is my core focus, supported by SQL reporting, production troubleshooting, and infrastructure experience."
+                id="Pengembangan sistem operasional menjadi fokus utama saya, didukung laporan SQL, penanganan kendala production, dan pengalaman infrastruktur."
               />
             </div>
             <div className="capability-list">
@@ -223,57 +458,18 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="experience section-pad" id="experience">
-          <div className="section-shell experience-layout">
-            <div className="experience-intro reveal">
-              <BilingualText as="h2" en="Experience" id="Pengalaman" />
-              <BilingualText
-                as="p"
-                en="A path from web products to the operational systems behind them."
-                id="Perjalanan dari produk web menuju sistem operasional di belakangnya."
-              />
-            </div>
-            <div className="experience-list">
-              <article className="experience-item reveal">
-                <div className="experience-date">2024 - <span className="lang-copy lang-en">Present</span><span className="lang-copy lang-id">Sekarang</span></div>
-                <div className="experience-body">
-                  <BilingualText as="h3" en="IT System and Data Specialist" id="Spesialis Sistem IT dan Data" />
-                  <BilingualText as="p" className="experience-company" en="Indogrosir · Retail Operations" id="Indogrosir · Operasional Ritel" />
-                  <BilingualText
-                    as="p"
-                    en="SQL analysis, internal systems, reporting automation, operational support, infrastructure readiness, and IT preparation for new branches."
-                    id="Analisis SQL, sistem internal, otomatisasi laporan, dukungan operasional, kesiapan infrastruktur, dan persiapan IT cabang baru."
-                  />
-                </div>
-              </article>
-              <article className="experience-item reveal">
-                <div className="experience-date">2023 - 2024</div>
-                <div className="experience-body">
-                  <BilingualText as="h3" en="Database Administrator Internship" id="Magang Database Administrator" />
-                  <BilingualText as="p" className="experience-company" en="IT Department" id="Departemen IT" />
-                  <BilingualText
-                    as="p"
-                    en="Built and maintained internal web applications, database schemas, tests, and technical documentation."
-                    id="Membangun dan memelihara aplikasi web internal, skema database, pengujian, dan dokumentasi teknis."
-                  />
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
         <section className="contact section-pad" id="contact">
           <div className="section-shell contact-layout reveal">
             <div className="contact-intro">
               <BilingualText
                 as="h2"
-                en="Build it. Support it. Keep it running."
-                id="Bangun. Dukung. Jaga tetap berjalan."
+                en="Let's talk about your team."
+                id="Mari bicarakan kebutuhan tim Anda."
               />
               <BilingualText
                 as="p"
-                en="I am prioritizing remote IT opportunities while remaining available for selected business projects."
-                id="Saya memprioritaskan peluang kerja IT remote dan tetap tersedia untuk project bisnis terpilih."
+                en="Looking for someone who can develop operational systems and understand the work behind them? Explore my experience or get in touch about a role."
+                id="Mencari anggota tim yang mampu mengembangkan sistem operasional dan memahami pekerjaan di baliknya? Lihat pengalaman saya atau hubungi untuk membahas posisi yang tersedia."
               />
             </div>
             <div className="contact-paths">
@@ -282,11 +478,12 @@ export default function HomePage() {
                 <BilingualText as="h3" en="Hiring for a remote IT role?" id="Mencari talenta untuk posisi IT remote?" />
                 <BilingualText
                   as="p"
-                  en="I am open to IT Developer, IT Support, and IT Infrastructure opportunities."
-                  id="Saya terbuka untuk posisi IT Developer, IT Support, dan IT Infrastructure."
+                  en="I am open to systems development and IT operations roles. Share the responsibilities, team context, and working arrangement."
+                  id="Saya terbuka untuk posisi pengembangan sistem dan operasional IT. Ceritakan tanggung jawab, konteks tim, dan pengaturan kerjanya."
                 />
                 <div className="contact-links">
-                  <a href="/files/CV-Yudha.pdf" download>Download CV ↓</a>
+                  <a href="/files/CV-Yudha.pdf" download><BilingualText en="Download CV ↓" id="Unduh CV ↓" /></a>
+                  <a href="mailto:lourensius.yudha@gmail.com?subject=Job%20opportunity"><BilingualText en="Discuss a role ↗" id="Bahas peluang kerja ↗" /></a>
                   <a href="https://www.linkedin.com/in/lourensius-yudha/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
                 </div>
               </section>
@@ -295,12 +492,11 @@ export default function HomePage() {
                 <BilingualText as="h3" en="Need a practical system or website?" id="Membutuhkan sistem atau website yang praktis?" />
                 <BilingualText
                   as="p"
-                  en="I am available to help growing businesses and international clients with selected operational projects."
-                  id="Saya tersedia untuk membantu bisnis berkembang dan client internasional melalui project operasional terpilih."
+                  en="Explore my services and relevant case studies for inventory systems, approval workflows, reporting automation, and websites."
+                  id="Lihat layanan dan studi kasus yang relevan untuk sistem inventaris, alur persetujuan, otomatisasi laporan, dan website."
                 />
                 <div className="contact-links">
-                  <a href="mailto:lourensius.yudha@gmail.com">Email me ↗</a>
-                  <a href="https://wa.me/6285259855468?text=Hi%20Yudha%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer">WhatsApp ↗</a>
+                  <Link href="/services/"><BilingualText en="View services →" id="Lihat layanan →" /></Link>
                 </div>
               </section>
             </div>

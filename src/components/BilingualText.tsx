@@ -1,7 +1,7 @@
 import type { LocalizedCopy } from "@/lib/portfolio-data";
 
 type Props = LocalizedCopy & {
-  as?: "span" | "p" | "h2" | "h3";
+  as?: "span" | "p" | "h1" | "h2" | "h3" | "h4" | "h5";
   className?: string;
 };
 
