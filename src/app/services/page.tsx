@@ -7,12 +7,12 @@ import { ProjectShowcase } from "@/components/ProjectShowcase";
 import styles from "./services.module.css";
 
 export const metadata: Metadata = {
-  title: "Business Systems & Automation Services | Lourensius Yudha",
-  description: "Need an inventory system, approval workflow, reporting bot, or business website? Explore Lourensius Yudha's services and discuss your project.",
+  title: "Website Developer for Business & Web Systems | Lourensius Yudha",
+  description: "Website development for landing pages, company profiles, inventory applications, and operational systems—from planning to production deployment.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Business Systems & Automation Services | Lourensius Yudha",
-    description: "Practical systems, automation, websites, and IT support built around real operational workflows.",
+    title: "Website Developer for Business & Web Systems | Lourensius Yudha",
+    description: "Responsive business websites and database-backed web systems built around real operational needs.",
     type: "website",
     url: "/services",
     images: [
@@ -26,13 +26,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Business Systems & Automation Services | Lourensius Yudha",
-    description: "Practical systems, automation, websites, and IT support for operational teams.",
+    title: "Website Developer for Business & Web Systems | Lourensius Yudha",
+    description: "Landing pages, company profiles, inventory applications, and operational web systems.",
     images: ["/twitter-image.png"],
   },
 };
 
 const services = [
+  {
+    title: { en: "Business websites and landing pages", id: "Website bisnis dan landing page" },
+    description: {
+      en: "Build a responsive website that presents your business clearly and guides visitors toward an inquiry or purchase decision.",
+      id: "Membangun website responsif yang menjelaskan bisnis Anda dengan jelas dan mengarahkan pengunjung menuju inquiry atau keputusan pembelian.",
+    },
+    deliverables: {
+      en: "Content hierarchy, responsive development, purposeful motion, contact integration, SEO foundations, SSL, and deployment.",
+      id: "Hierarki konten, pengembangan responsif, motion yang terarah, integrasi kontak, fondasi SEO, SSL, dan deployment.",
+    },
+  },
   {
     title: { en: "Operational systems and inventory workflows", id: "Sistem operasional dan workflow inventaris" },
     description: {
@@ -56,17 +67,6 @@ const services = [
     },
   },
   {
-    title: { en: "Public websites", id: "Website publik" },
-    description: {
-      en: "Present a business clearly with a responsive website and a direct path from discovery to inquiry.",
-      id: "Menampilkan bisnis secara jelas melalui website responsif dan jalur langsung dari penemuan menuju inquiry.",
-    },
-    deliverables: {
-      en: "Responsive development, content hierarchy, purposeful motion, SEO foundations, SSL, and deployment support.",
-      id: "Pengembangan responsif, hierarki konten, motion yang terarah, fondasi SEO, SSL, dan dukungan deployment.",
-    },
-  },
-  {
     title: { en: "Deployment and production support", id: "Deployment dan dukungan production" },
     description: {
       en: "Get your application ready for daily use with hosting setup, scheduled processes, and a clear handover to your team.",
@@ -83,9 +83,9 @@ const serviceStructuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://lourensiusyudha.my.id/services/#services",
-  name: "Systems Development and IT Services",
+  name: "Website and Web Systems Development Services",
   url: "https://lourensiusyudha.my.id/services/",
-  description: "Operational systems, reporting automation, public websites, IT support, and infrastructure services for business teams.",
+  description: "Website development for business websites, landing pages, inventory applications, and operational systems.",
   provider: {
     "@type": "Person",
     "@id": "https://lourensiusyudha.my.id/#person",
@@ -104,17 +104,17 @@ export default function ServicesPage() {
       <main id="main-content" className={styles.page} tabIndex={-1}>
         <section className={styles.hero}>
           <div className={styles.shell}>
-            <BilingualText className={styles.category} en="For businesses · Project services" id="Untuk bisnis · Layanan project" />
+            <BilingualText className={styles.category} en="Website development · From idea to production" id="Pengembangan website · Dari ide hingga production" />
             <BilingualText
               as="h1"
-              en="Turn manual workflows into working systems."
-              id="Ubah proses manual menjadi sistem yang berjalan."
+              en="Websites built for how your business works."
+              id="Website yang dibangun sesuai cara bisnis Anda bekerja."
             />
             <BilingualText
               as="p"
               className={styles.summary}
-              en="I build operational tools, inventory systems, and reporting automation so your team can track work in one place. I also develop public websites and help bring projects into production."
-              id="Saya membangun aplikasi operasional, sistem inventaris, dan otomatisasi laporan agar tim Anda dapat memantau pekerjaan di satu tempat. Saya juga mengembangkan website publik dan membantu deployment project."
+              en="From landing pages and company profiles to inventory applications and operational systems, I develop responsive websites with the interface, database, and deployment your project needs."
+              id="Mulai dari landing page dan company profile hingga aplikasi inventaris dan sistem operasional, saya mengembangkan website responsif lengkap dengan antarmuka, database, dan deployment sesuai kebutuhan project Anda."
             />
             <div className={styles.heroActions}>
               <Link href="#contact">

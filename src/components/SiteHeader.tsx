@@ -64,10 +64,10 @@ export function SiteHeader({ audience = "recruiters" }: { audience?: "recruiters
     { href: "/services/#contact", en: "Contact", id: "Kontak" },
     { href: "/", en: "Career portfolio", id: "Profil karier" },
   ] : [
-    { href: "/#experience", en: "Experience", id: "Pengalaman" },
-    { href: "/#certifications", en: "Certification", id: "Sertifikasi" },
     { href: "/#work", en: "Work", id: "Karya" },
+    { href: "/#experience", en: "Experience", id: "Pengalaman" },
     { href: "/#skills", en: "Skills", id: "Keahlian" },
+    { href: "/#certifications", en: "Certification", id: "Sertifikasi" },
     { href: "/#contact", en: "Contact", id: "Kontak" },
     { href: "/services/", en: "Services", id: "Layanan" },
   ];

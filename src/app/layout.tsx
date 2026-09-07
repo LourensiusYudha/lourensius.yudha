@@ -20,17 +20,19 @@ const fira = Fira_Code({
 export const metadata: Metadata = {
   metadataBase: new URL("https://lourensiusyudha.my.id"),
   applicationName: "LYK Portfolio",
-  title: "Lourensius Yudha | Operational Systems Developer",
+  title: "Lourensius Yudha | Website & Business Systems Developer",
   description:
-    "Explore Lourensius Yudha's experience in operational systems, SQL reporting, IT support, and retail infrastructure. View case studies and download his CV.",
+    "I build business websites, landing pages, inventory applications, and operational web systems from planning to production deployment.",
   keywords: [
-    "IT Developer",
-    "IT Support",
-    "IT Infrastructure",
-    "System Developer",
-    "Database Optimization",
+    "Website Developer",
+    "Web Developer Indonesia",
+    "Business Website Development",
+    "Landing Page Developer",
+    "Inventory System Developer",
+    "Operational System Developer",
+    "Laravel Developer",
+    "Next.js Developer",
     "Reporting Automation",
-    "Remote IT",
   ],
   authors: [{ name: "Lourensius Yudha Kristianto" }],
   creator: "Lourensius Yudha Kristianto",
@@ -47,8 +49,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Lourensius Yudha | Operational Systems Developer",
-    description: "Career portfolio: operational systems, reporting automation, and hands-on IT operations. Explore experience, project contributions, and CV.",
+    title: "Lourensius Yudha | Website & Business Systems Developer",
+    description: "I build business websites, landing pages, inventory applications, and operational web systems from planning to production deployment.",
     type: "website",
     url: "/",
     siteName: "Lourensius Yudha Portfolio",
@@ -56,8 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lourensius Yudha | Operational Systems Developer",
-    description: "Career portfolio: operational systems, reporting automation, and hands-on IT operations. Explore experience, project contributions, and CV.",
+    title: "Lourensius Yudha | Website & Business Systems Developer",
+    description: "I build business websites, landing pages, inventory applications, and operational web systems from planning to production deployment.",
   },
 };
 

@@ -123,6 +123,18 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                   <dt><BilingualText en="My contribution" id="Kontribusi pribadi" /></dt>
                   <dd><BilingualText {...project.contribution} /></dd>
                 </div>
+                {project.demoUrl ? (
+                  <div className={styles.overviewLink}>
+                    <dt><BilingualText en="Application" id="Aplikasi" /></dt>
+                    <dd>
+                      <a href={project.demoUrl} target="_blank" rel="noreferrer">
+                        <span className="lang-copy lang-en">Open live application</span>
+                        <span className="lang-copy lang-id">Buka aplikasi</span>
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    </dd>
+                  </div>
+                ) : null}
               </dl>
             </section>
           </div>
@@ -382,17 +394,17 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           <div className={styles.shell}>
             <BilingualText
               as="h2"
-              en="Need a practical system for a similar workflow?"
-              id="Membutuhkan sistem praktis untuk workflow serupa?"
+              en="Need a website or web system for your business?"
+              id="Membutuhkan website atau sistem web untuk bisnis Anda?"
             />
             <BilingualText
               as="p"
-              en="Tell me about the process you want to make clearer, faster, or easier to monitor."
-              id="Ceritakan proses yang ingin dibuat lebih jelas, cepat, atau mudah dipantau."
+              en="Tell me whether you need a landing page, company profile, inventory application, or a custom operational workflow."
+              id="Ceritakan apakah Anda membutuhkan landing page, company profile, aplikasi inventaris, atau workflow operasional custom."
             />
             <Link href="/services/#contact">
-              <span className="lang-copy lang-en">Discuss a similar project</span>
-              <span className="lang-copy lang-id">Diskusikan project serupa</span>
+              <span className="lang-copy lang-en">Discuss your website project</span>
+              <span className="lang-copy lang-id">Diskusikan project website Anda</span>
               <span aria-hidden="true">→</span>
             </Link>
           </div>

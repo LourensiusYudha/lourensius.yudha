@@ -56,8 +56,8 @@ export const projects: PortfolioProject[] = [
     },
     category: { en: "Web and mobile operations", id: "Operasional web dan mobile" },
     summary: {
-      en: "A production web admin and mobile advisor platform for assigning, recording, reviewing, mapping, and reporting member visits.",
-      id: "Platform production web admin dan mobile advisor untuk penugasan, pencatatan, review, pemetaan, dan pelaporan kunjungan member.",
+      en: "A production platform used by 10+ field surveyors and supervisors to assign, record, review, map, and report member visits across mobile and web.",
+      id: "Platform production yang digunakan 10+ surveyor lapangan dan supervisor untuk penugasan, pencatatan, review, pemetaan, serta pelaporan kunjungan member melalui mobile dan web.",
     },
     contribution: {
       en: "Product workflow design, full-stack web development, authentication, database, storage, mobile API integration, and production deployment.",
@@ -65,21 +65,21 @@ export const projects: PortfolioProject[] = [
     },
     detail: {
       en: [
-        "I designed the workflow around two connected perspectives: advisors completing GET and RKM visits in the field, and administrators assigning work, reviewing evidence, monitoring performance, and preparing reports.",
+        "I designed the workflow around two connected perspectives for 10+ users: field surveyors completing GET and RKM visits from their own phones, and supervisors administering assignments, evidence review, performance monitoring, and reports from office computers.",
         "Now deployed and used in field operations, the web application and Flutter client share the same Supabase-backed data flow. GPS validation, compressed photo uploads, role-based authorization, maps, analytics, and export tools turn field activity into information the operations team can review and act on.",
       ],
       id: [
-        "Saya merancang workflow berdasarkan dua kebutuhan yang saling terhubung: advisor menyelesaikan kunjungan GET dan RKM di lapangan, sedangkan admin memberikan tugas, meninjau bukti, memantau performa, dan menyiapkan laporan.",
+        "Saya merancang workflow berdasarkan dua kebutuhan yang saling terhubung untuk 10+ pengguna: surveyor menyelesaikan kunjungan GET dan RKM melalui HP masing-masing, sedangkan supervisor mengelola assignment, review bukti, monitoring performa, dan laporan melalui komputer kantor.",
         "Kini telah digunakan dalam operasional lapangan, aplikasi web dan klien Flutter memakai alur data berbasis Supabase yang sama. Validasi GPS, upload foto terkompresi, otorisasi berbasis peran, peta, analytics, dan fitur export mengubah aktivitas lapangan menjadi informasi yang dapat ditinjau dan ditindaklanjuti tim operasional.",
       ],
     },
     impacts: {
-      en: ["Production system used in field operations", "Web admin and mobile advisor connected", "GET and RKM visits monitored", "Review, assignment, and exports centralized"],
-      id: ["Sistem production digunakan di lapangan", "Web admin dan mobile advisor terhubung", "Kunjungan GET dan RKM terpantau", "Review, assignment, dan export terpusat"],
+      en: ["10+ field and supervisory users", "Surveyors work from their own phones", "Supervisors administer from office computers", "Assignment, review, maps, and exports centralized"],
+      id: ["10+ pengguna lapangan dan supervisor", "Surveyor bekerja melalui HP masing-masing", "Supervisor mengelola melalui komputer kantor", "Assignment, review, peta, dan export terpusat"],
     },
     impactLabels: {
-      en: ["Deployment", "Platform", "Field workflow", "Administration"],
-      id: ["Deployment", "Platform", "Workflow lapangan", "Administrasi"],
+      en: ["Users", "Field access", "Admin access", "Workflow"],
+      id: ["Pengguna", "Akses lapangan", "Akses admin", "Workflow"],
     },
     tech: [
       "React 19",
@@ -222,90 +222,111 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "luvea-inventory-system",
-    title: { en: "Luvea Inventory System", id: "Sistem Inventory Luvea" },
-    category: { en: "Inventory platform", id: "Platform inventaris" },
+    title: { en: "Luvea Digital Platform", id: "Platform Digital Luvea" },
+    category: { en: "Website and inventory system", id: "Website dan sistem inventaris" },
     summary: {
-      en: "An inventory system that replaced manual tracking for a 10+ item workflow with clearer, easier-to-monitor records.",
-      id: "Sistem inventaris yang menggantikan pencatatan manual untuk alur 10+ item dengan data yang lebih jelas dan mudah dipantau.",
+      en: "Two complementary digital products for Luvea: a public landing page for brand discovery and an operational system for inventory, sales, margins, and reporting.",
+      id: "Dua produk digital yang saling melengkapi untuk Luvea: landing page publik untuk memperkenalkan brand dan sistem operasional untuk inventaris, penjualan, margin, serta laporan.",
     },
     contribution: {
-      en: "Inventory workflow design, Laravel development, and MySQL implementation.",
-      id: "Perancangan workflow inventaris, pengembangan Laravel, dan implementasi MySQL.",
+      en: "Product and responsive design, front-end development, inventory workflow design, Laravel and MySQL implementation, and production deployment.",
+      id: "Desain produk dan responsif, pengembangan front-end, perancangan workflow inventaris, implementasi Laravel dan MySQL, serta deployment production.",
     },
     detail: {
       en: [
-        "Stock tracking depended on manual updates. I built a focused inventory system for recording stock in and out, checking current levels, and managing more than 10 inventory items in one dependable operational view.",
-        "The system made stock easier to monitor, reduced repetitive work, and helped the team identify recording errors before they became larger discrepancies.",
+        "Luvea needed two different digital experiences within the same business ecosystem. The public landing page introduces the brand, product story, and contact path, while the administration system supports product records, sales, stock receipts, restock planning, stock opname, margin calculations, reporting, and printable invoices.",
+        "I treated them as separate modules with different audiences and technology choices, not as a single integrated application. Together they cover the customer-facing presence and the operational workflow behind the business.",
       ],
       id: [
-        "Pelacakan stok bergantung pada pembaruan manual. Saya membangun sistem inventaris untuk mencatat stok masuk dan keluar, memeriksa ketersediaan, dan mengelola lebih dari 10 item inventaris dalam satu tampilan operasional yang andal.",
-        "Sistem membuat stok lebih mudah dipantau, mengurangi pekerjaan berulang, dan membantu tim menemukan kesalahan pencatatan sebelum menjadi selisih yang lebih besar.",
+        "Luvea membutuhkan dua pengalaman digital yang berbeda dalam satu ekosistem bisnis. Landing page publik memperkenalkan brand, cerita produk, dan jalur kontak, sedangkan sistem administrasi mendukung data produk, penjualan, penerimaan stok, perencanaan restock, stock opname, perhitungan margin, laporan, serta invoice siap cetak.",
+        "Saya memperlakukannya sebagai modul terpisah dengan pengguna dan pilihan teknologi yang berbeda, bukan sebagai satu aplikasi yang terintegrasi. Keduanya bersama-sama mencakup kehadiran untuk pelanggan dan workflow operasional di balik bisnis.",
       ],
     },
     impacts: {
-      en: ["10+ inventory items", "Manual tracking replaced", "Stock easier to monitor", "Recording errors easier to catch"],
-      id: ["10+ item inventaris", "Pencatatan manual digantikan", "Stok lebih mudah dipantau", "Kesalahan lebih mudah ditemukan"],
+      en: ["Public website launched", "10+ inventory items managed", "Manual stock tracking replaced", "Two business needs covered"],
+      id: ["Website publik diluncurkan", "10+ item inventaris dikelola", "Pencatatan stok manual digantikan", "Dua kebutuhan bisnis tercakup"],
     },
-    tech: [
-      "Laravel 13",
-      "PHP 8.5",
-      "MySQL",
-      "Tailwind CSS",
-      "Bootstrap",
-      "Production Web Server",
-      "Shared Hosting",
-      "Git Version Control",
-      "SSL Certificate",
-    ],
-    image: "/images/inventory-luvea.png",
-    imageAlt: {
-      en: "Dashboard of the Luvea inventory system",
-      id: "Dashboard sistem inventory Luvea",
-    },
-  },
-  {
-    slug: "luvea-website",
-    title: { en: "Luvea Website", id: "Website Luvea" },
-    category: { en: "Brand website", id: "Website brand" },
-    summary: {
-      en: "A responsive public website that presents the brand clearly and gives visitors a dependable path from discovery to inquiry.",
-      id: "Website publik responsif yang menampilkan brand dengan jelas dan memberi pengunjung jalur andal dari penemuan menuju inquiry.",
-    },
-    contribution: {
-      en: "Responsive design, front-end development, and production deployment.",
-      id: "Desain responsif, pengembangan front-end, dan deployment ke production.",
-    },
-    detail: {
-      en: [
-        "Luvea needed an online presence that matched the brand and made product discovery simple. I designed and built a responsive website with a clear hierarchy for products, story, and contact.",
-        "The result is a live public touchpoint with a stable experience and a shorter path from first visit to inquiry on desktop and mobile.",
-      ],
-      id: [
-        "Luvea membutuhkan kehadiran online yang sesuai dengan brand dan memudahkan penemuan produk. Saya merancang serta membangun website responsif dengan hierarki jelas untuk produk, cerita, dan kontak.",
-        "Hasilnya adalah touchpoint publik yang aktif dengan pengalaman stabil dan jalur lebih singkat dari kunjungan pertama menuju inquiry di desktop maupun mobile.",
-      ],
-    },
-    impacts: {
-      en: ["Live public website", "Clearer brand presence", "Responsive across devices", "Stable day-to-day experience"],
-      id: ["Website publik aktif", "Kehadiran brand lebih jelas", "Responsif di berbagai perangkat", "Pengalaman harian yang stabil"],
+    impactLabels: {
+      en: ["Brand", "Inventory", "Operations", "Scope"],
+      id: ["Brand", "Inventaris", "Operasional", "Cakupan"],
     },
     tech: [
       "Next.js",
       "JavaScript",
-      "Tailwind CSS",
       "Framer Motion",
-      "Lenis Scroll",
+      "Laravel 13",
+      "PHP 8.5",
+      "MySQL",
+      "Tailwind CSS",
       "Vercel",
-      "Production Web Server",
-      "Shared Hosting",
-      "Git Version Control",
-      "SSL Certificate",
     ],
-    image: "/images/luvea-optimized.jpg",
+    image: "/images/luvea-banner.webp",
     imageAlt: {
-      en: "Luvea website landing page",
-      id: "Landing page website Luvea",
+      en: "Luvea digital platform banner showing the public website and inventory, sales, margin, and invoice workflows",
+      id: "Banner Platform Digital Luvea yang menampilkan website publik serta workflow inventaris, penjualan, margin, dan invoice",
     },
+    galleryGroups: [
+      {
+        name: { en: "Public Landing Page", id: "Landing Page Publik" },
+        description: {
+          en: "The customer-facing module introduces Luvea's brand, products, and inquiry path across screen sizes.",
+          id: "Modul untuk pelanggan yang memperkenalkan brand, produk, dan jalur inquiry Luvea di berbagai ukuran layar.",
+        },
+        layout: "desktop",
+        images: [
+          { src: "/images/luvea-optimized.jpg", alt: { en: "Luvea responsive public landing page", id: "Landing page publik Luvea yang responsif" }, caption: { en: "The public website presents the brand and gives visitors a direct path from product discovery to inquiry.", id: "Website publik memperkenalkan brand dan memberi pengunjung jalur langsung dari penemuan produk menuju inquiry." } },
+        ],
+      },
+      {
+        name: { en: "Inventory System", id: "Sistem Inventaris" },
+        description: {
+          en: "The administration module connects product, sales, inventory, margin, and reporting workflows in one operational interface.",
+          id: "Modul administrasi menghubungkan workflow produk, penjualan, inventaris, margin, dan laporan dalam satu antarmuka operasional.",
+        },
+        layout: "desktop",
+        images: [
+          { src: "/images/luvea/inventory/login.webp", alt: { en: "Luvea administration system login", id: "Login sistem administrasi Luvea" }, caption: { en: "A dedicated login protects access to Luvea's inventory and sales operations.", id: "Login khusus melindungi akses menuju operasional inventaris dan penjualan Luvea." } },
+          { src: "/images/luvea/inventory/products.webp", alt: { en: "Luvea product and inventory catalogue", id: "Katalog produk dan inventaris Luvea" }, caption: { en: "The product catalogue brings PLU, barcode, purchase price, selling price, stock, and maintenance actions into one view.", id: "Katalog produk menyatukan PLU, barcode, harga beli, harga jual, stok, dan tindakan pengelolaan dalam satu tampilan." } },
+          { src: "/images/luvea/inventory/sales-entry.webp", alt: { en: "Luvea sales entry form", id: "Form input penjualan Luvea" }, caption: { en: "Sales entries capture the channel, product, quantity, received value, and subtotal while referencing current stock.", id: "Input penjualan mencatat channel, produk, jumlah, nilai diterima, dan subtotal dengan mengacu pada stok terkini." } },
+          { src: "/images/luvea/inventory/stock-receipt.webp", alt: { en: "Luvea stock receipt form", id: "Form penerimaan stok Luvea" }, caption: { en: "Stock receipts record the supplier, receipt date, product quantities, and purchase prices.", id: "Penerimaan stok mencatat pemasok, tanggal penerimaan, jumlah produk, dan harga beli." } },
+          { src: "/images/luvea/inventory/restock.webp", alt: { en: "Luvea restock planning screen", id: "Tampilan perencanaan restock Luvea" }, caption: { en: "Restock recommendations use recent sales, stock thresholds, and a target coverage period to flag products that need attention.", id: "Rekomendasi restock menggunakan penjualan terbaru, ambang stok, dan target periode persediaan untuk menandai produk yang perlu diperhatikan." } },
+          { src: "/images/luvea/inventory/stock-opname.webp", alt: { en: "Luvea stock opname history", id: "Riwayat stock opname Luvea" }, caption: { en: "Stock opname compares physical and system quantities and retains a history of adjustments.", id: "Stock opname membandingkan jumlah fisik dengan sistem serta menyimpan riwayat penyesuaian." } },
+          { src: "/images/luvea/inventory/stock-history.webp", alt: { en: "Luvea stock movement history", id: "Riwayat pergerakan stok Luvea" }, caption: { en: "A chronological log traces stock-in, stock-out, previous quantities, updated quantities, and their source transactions.", id: "Log kronologis menelusuri stok masuk, stok keluar, jumlah sebelumnya, jumlah terbaru, dan transaksi sumbernya." } },
+          { src: "/images/luvea/inventory/targets.webp", alt: { en: "Luvea sales targets and period comparison", id: "Target penjualan dan perbandingan periode Luvea" }, caption: { en: "Monthly targets and period comparisons connect sales performance with product-level changes.", id: "Target bulanan dan perbandingan periode menghubungkan performa penjualan dengan perubahan pada tingkat produk." } },
+          { src: "/images/luvea/inventory/reports.webp", alt: { en: "Luvea report configuration", id: "Konfigurasi laporan Luvea" }, caption: { en: "Reports can be prepared by type and date range before previewing the output.", id: "Laporan dapat disiapkan berdasarkan jenis dan rentang tanggal sebelum hasilnya ditinjau." } },
+          { src: "/images/luvea/inventory/margin-calculator.webp", alt: { en: "Luvea marketplace margin calculator", id: "Kalkulator margin marketplace Luvea" }, caption: { en: "The margin calculator models marketplace fees, optional programs, net receipts, and estimated profit.", id: "Kalkulator margin memodelkan biaya marketplace, program opsional, penerimaan bersih, dan estimasi laba." } },
+          { src: "/images/luvea/inventory/invoice.webp", alt: { en: "Printable Luvea sales invoice", id: "Invoice penjualan Luvea siap cetak" }, caption: { en: "Sales data is converted into a customer-ready invoice with item details, totals, and a print action.", id: "Data penjualan diubah menjadi invoice untuk pelanggan yang berisi detail barang, total, dan aksi cetak." } },
+        ],
+      },
+    ],
+    techGroups: [
+      {
+        name: { en: "Public landing page", id: "Landing page publik" },
+        items: [
+          { name: "Next.js and JavaScript", description: { en: "Provide the public website structure and front-end behavior.", id: "Menyediakan struktur website publik dan perilaku front-end." } },
+          { name: "Tailwind CSS", description: { en: "Builds the responsive visual system.", id: "Membangun sistem visual yang responsif." } },
+          { name: "Framer Motion and Lenis Scroll", description: { en: "Add purposeful motion and controlled smooth scrolling.", id: "Menambahkan motion yang terarah dan smooth scrolling yang terkontrol." } },
+          { name: "Vercel", description: { en: "Hosts the public website.", id: "Meng-host website publik." } },
+        ],
+      },
+      {
+        name: { en: "Inventory system", id: "Sistem inventaris" },
+        items: [
+          { name: "Laravel 13 and PHP 8.5", description: { en: "Run the inventory application and its business rules.", id: "Menjalankan aplikasi inventaris dan business rule-nya." } },
+          { name: "MySQL", description: { en: "Stores items and stock movement records.", id: "Menyimpan item dan catatan pergerakan stok." } },
+          { name: "Tailwind CSS and Bootstrap", description: { en: "Support the operational interface.", id: "Mendukung antarmuka operasional." } },
+          { name: "Shared hosting and production web server", description: { en: "Provide the production runtime for the inventory module.", id: "Menyediakan runtime production untuk modul inventaris." } },
+        ],
+      },
+      {
+        name: { en: "Delivery", id: "Delivery" },
+        items: [
+          { name: "Git version control", description: { en: "Tracks changes across both modules.", id: "Melacak perubahan pada kedua modul." } },
+          { name: "SSL certificate", description: { en: "Secures production access.", id: "Mengamankan akses production." } },
+        ],
+      },
+    ],
+    demoUrl: "https://admin.luvea.my.id",
   },
   {
     slug: "whatsapp-sales-monitoring-bot",
@@ -315,8 +336,8 @@ export const projects: PortfolioProject[] = [
     },
     category: { en: "Reporting automation", id: "Otomatisasi laporan" },
     summary: {
-      en: "Scheduled sales and margin reports that replaced a repetitive 10-minute manual step and reached staff on WhatsApp.",
-      id: "Laporan sales dan margin terjadwal yang menggantikan proses manual 10 menit dan menjangkau staf melalui WhatsApp.",
+      en: "Scheduled sales and margin reports for 9 divisions that replaced a repetitive 10-minute manual step and reached staff on WhatsApp.",
+      id: "Laporan sales dan margin terjadwal untuk 9 divisi yang menggantikan proses manual berulang selama 10 menit dan dikirim melalui WhatsApp.",
     },
     contribution: {
       en: "SQL reporting logic, WhatsApp delivery, and scheduled automation.",
@@ -324,17 +345,17 @@ export const projects: PortfolioProject[] = [
     },
     detail: {
       en: [
-        "Each sales report required a repetitive 10-minute manual step. I built a bot that queries the company database, formats sales and margin summaries, and sends them to Indogrosir WhatsApp groups on schedule.",
+        "Each sales report required a repetitive 10-minute manual step and often depended on the reporting team being available during its shift. I built a bot that queries the company database, formats sales and margin summaries, and sends scheduled updates to WhatsApp groups used across 9 divisions.",
         "The same system monitors thresholds and sends proactive alerts, helping the team respond to unusual stock movement or sales performance sooner.",
       ],
       id: [
-        "Setiap laporan penjualan membutuhkan proses manual berulang selama 10 menit. Saya membangun bot yang menjalankan query database, memformat ringkasan sales dan margin, lalu mengirimkannya ke grup WhatsApp Indogrosir secara terjadwal.",
+        "Setiap laporan penjualan membutuhkan proses manual berulang selama 10 menit dan sering bergantung pada ketersediaan tim report di shift terkait. Saya membangun bot yang menjalankan query database, memformat ringkasan sales dan margin, lalu mengirimkan update terjadwal ke grup WhatsApp yang digunakan oleh 9 divisi.",
         "Sistem yang sama memantau ambang batas dan mengirim alert proaktif agar tim dapat merespons pergerakan stok atau kinerja penjualan lebih cepat.",
       ],
     },
     impacts: {
-      en: ["10-minute reporting step automated", "Scheduled sales updates", "Margin reporting included", "Distributed through WhatsApp"],
-      id: ["Proses laporan 10 menit diotomatisasi", "Update sales terjadwal", "Laporan margin tersedia", "Didistribusikan melalui WhatsApp"],
+      en: ["9 divisions receive the reports", "10-minute reporting step automated", "Less dependency on reporting-team shifts", "Sales and margin updates sent on schedule"],
+      id: ["Laporan menjangkau 9 divisi", "Proses laporan 10 menit diotomatisasi", "Mengurangi ketergantungan pada shift tim report", "Update sales dan margin dikirim terjadwal"],
     },
     tech: [
       "Node.js",
@@ -370,21 +391,21 @@ export const projects: PortfolioProject[] = [
     },
     detail: {
       en: [
-        "I built one connected workflow for division users and Admin GA. Request periods control when submissions are accepted, while the administration area brings review queues, item-level decisions, fulfillment, and warehouse stock into one traceable system.",
+        "I built one connected workflow for Admin GA and division accounts. Each division uses one account held by its supervisor, with requests submitted by the supervisor or a person they designate. Request periods control when submissions are accepted, while Admin GA manages review queues, item-level decisions, fulfillment, and warehouse stock in one traceable system.",
         "The application also turns operational data into recap matrices, period comparisons, Excel exports, PDF receipts, and digitally signed proof of handover. Service-layer logic keeps inventory and realization rules separate from the interface.",
       ],
       id: [
-        "Saya membangun satu workflow terhubung untuk pengguna divisi dan Admin GA. Periode mengatur kapan permintaan dapat diajukan, sedangkan area administrasi menyatukan antrean review, keputusan per barang, realisasi, dan stok gudang dalam sistem yang dapat ditelusuri.",
+        "Saya membangun satu workflow terhubung untuk Admin GA dan akun divisi. Setiap divisi menggunakan satu akun yang dipegang SPV, dengan permintaan diajukan oleh SPV atau petugas yang ditunjuk. Periode mengatur kapan permintaan dapat diajukan, sedangkan Admin GA mengelola antrean review, keputusan per barang, realisasi, dan stok gudang dalam satu sistem yang dapat ditelusuri.",
         "Data operasional kemudian diolah menjadi rekap matrix, perbandingan periode, export Excel, tanda terima PDF, dan bukti serah terima dengan tanda tangan digital. Logic pada service layer menjaga aturan inventaris dan realisasi tetap terpisah dari antarmuka.",
       ],
     },
     impacts: {
-      en: ["Cross-department requests centralized", "Item review and fulfillment traceable", "Warehouse stock connected to realization", "Excel and PDF documents generated"],
-      id: ["Permintaan lintas divisi terpusat", "Review barang dan realisasi dapat ditelusuri", "Stok gudang terhubung dengan realisasi", "Dokumen Excel dan PDF dihasilkan sistem"],
+      en: ["One controlled account per division", "Supervisors or designated staff submit requests", "Admin GA controls review and fulfillment", "Stock and handover records remain traceable"],
+      id: ["Satu akun terkontrol per divisi", "SPV atau petugas yang ditunjuk mengajukan permintaan", "Admin GA mengelola review dan realisasi", "Stok dan dokumen serah terima dapat ditelusuri"],
     },
     impactLabels: {
-      en: ["Workflow", "Control", "Inventory", "Documents"],
-      id: ["Workflow", "Kontrol", "Inventaris", "Dokumen"],
+      en: ["Access", "Submission", "Administration", "Traceability"],
+      id: ["Akses", "Pengajuan", "Administrasi", "Ketertelusuran"],
     },
     tech: [
       "PHP 8.3+",

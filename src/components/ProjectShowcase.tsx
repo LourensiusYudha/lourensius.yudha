@@ -21,8 +21,8 @@ const compactTech = (tech: string[]) => tech.slice(0, 4);
 
 export function ProjectShowcase({ audience = "recruiters" }: { audience?: "recruiters" | "clients" }) {
   const locale = useSyncExternalStore(subscribeLanguage, getLanguage, getServerLanguage);
-  const featuredProjectIndexes = audience === "clients" ? [0, 5, 2] : [0, 5, 6];
-  const supportingProjectIndexes = audience === "clients" ? [4, 3] : [4, 1, 2, 3];
+  const featuredProjectIndexes = audience === "clients" ? [0, 4, 2] : [0, 4, 5];
+  const supportingProjectIndexes = audience === "clients" ? [3, 1] : [3, 1, 2];
 
   return (
     <div className="project-showcase">

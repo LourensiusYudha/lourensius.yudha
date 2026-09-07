@@ -25,7 +25,7 @@ export const caseStudies: Record<string, CaseStudyContent> = {
   "surveyor-member-relation-visit-monitoring": {
     overview: {
       role: { en: "Product workflow and full-stack development", id: "Workflow produk dan pengembangan full-stack" },
-      users: { en: "Field advisors and operations administrators", id: "Advisor lapangan dan admin operasional" },
+      users: { en: "10+ users: field surveyors on mobile and supervisors on office computers", id: "10+ pengguna: surveyor lapangan melalui HP dan supervisor melalui komputer kantor" },
       status: { en: "In production and used in field operations", id: "Production dan digunakan di operasional lapangan" },
     },
     problem: [
@@ -103,8 +103,8 @@ export const caseStudies: Record<string, CaseStudyContent> = {
       },
     ],
     resultIntro: {
-      en: "Now in production, the system connects field visit execution with administrative monitoring. Advisors submit visits from mobile devices, while administrators assign work, review evidence, manage members, analyze activity, and export reports without rebuilding the workflow in spreadsheets.",
-      id: "Kini telah production, sistem menghubungkan pelaksanaan kunjungan lapangan dengan monitoring administratif. Advisor mengirim data kunjungan melalui perangkat mobile, sedangkan administrator memberikan assignment, meninjau bukti, mengelola member, menganalisis aktivitas, dan mengekspor laporan tanpa menyusun ulang workflow di spreadsheet.",
+      en: "Now in production for 10+ users, the system connects field visit execution with administrative monitoring. Surveyors submit visits from their own phones, while supervisors use office computers to assign work, review evidence, manage members, analyze activity, and export reports without rebuilding the workflow in spreadsheets.",
+      id: "Kini telah production untuk 10+ pengguna, sistem menghubungkan pelaksanaan kunjungan lapangan dengan monitoring administratif. Surveyor mengirim data kunjungan melalui HP masing-masing, sedangkan supervisor menggunakan komputer kantor untuk memberikan assignment, meninjau bukti, mengelola member, menganalisis aktivitas, dan mengekspor laporan tanpa menyusun ulang workflow di spreadsheet.",
     },
     learnings: [
       {
@@ -239,110 +239,110 @@ export const caseStudies: Record<string, CaseStudyContent> = {
   },
   "luvea-inventory-system": {
     overview: {
-      role: { en: "Inventory system development", id: "Pengembangan sistem inventaris" },
-      users: { en: "Luvea's stock management team", id: "Tim pengelola stok Luvea" },
-      status: { en: "Inventory management system", id: "Sistem pengelolaan inventaris" },
+      role: { en: "Full-stack and front-end development", id: "Pengembangan full-stack dan front-end" },
+      users: { en: "Luvea's visitors and stock management team", id: "Pengunjung dan tim pengelola stok Luvea" },
+      status: { en: "Public website and inventory system", id: "Website publik dan sistem inventaris" },
     },
     problem: [
       {
-        en: "Stock movement was recorded manually, making current quantities harder to verify and recording mistakes easier to miss. The team needed one dependable view for more than 10 inventory items.",
-        id: "Pergerakan stok dicatat secara manual sehingga jumlah terkini lebih sulit diverifikasi dan kesalahan pencatatan lebih mudah terlewat. Tim membutuhkan satu tampilan yang andal untuk lebih dari 10 item inventaris.",
+        en: "Luvea needed a clearer public presence for product discovery and a more dependable operational system for products, sales, inventory, margins, and reporting. These were related business needs, but they served different users and required separate product experiences.",
+        id: "Luvea membutuhkan kehadiran publik yang lebih jelas untuk penemuan produk serta sistem operasional yang lebih andal untuk produk, penjualan, inventaris, margin, dan laporan. Keduanya merupakan kebutuhan bisnis yang berkaitan, tetapi melayani pengguna dan pengalaman produk yang berbeda.",
       },
     ],
     responsibilities: [
       {
-        en: "I translated the stock workflow into system rules, designed the core interface, developed the Laravel application, connected MySQL, and prepared it for production deployment.",
-        id: "Saya menerjemahkan workflow stok menjadi aturan sistem, merancang antarmuka utama, mengembangkan aplikasi Laravel, menghubungkan MySQL, dan menyiapkannya untuk deployment production.",
+        en: "I designed and developed the responsive landing page, added purposeful motion, translated the inventory workflow into system rules, built the Laravel and MySQL application, and prepared both modules for production.",
+        id: "Saya merancang dan mengembangkan landing page responsif, menambahkan motion yang terarah, menerjemahkan workflow inventaris menjadi aturan sistem, membangun aplikasi Laravel dan MySQL, serta menyiapkan kedua modul untuk production.",
       },
     ],
     constraints: [
       {
-        en: "The interface had to remain simple for routine stock updates without hiding important information.",
-        id: "Antarmuka harus tetap sederhana untuk pembaruan stok rutin tanpa menyembunyikan informasi penting.",
+        en: "The public website and inventory system needed distinct interfaces because their users, goals, and technical requirements were different.",
+        id: "Website publik dan sistem inventaris membutuhkan antarmuka berbeda karena pengguna, tujuan, dan kebutuhan teknisnya tidak sama.",
       },
       {
-        en: "Stock-in and stock-out records needed consistent validation so the displayed balance remained dependable.",
-        id: "Catatan stok masuk dan keluar membutuhkan validasi yang konsisten agar saldo yang ditampilkan tetap dapat dipercaya.",
+        en: "Brand content and motion had to remain clear and responsive without slowing the visitor's path to inquiry.",
+        id: "Konten brand dan motion harus tetap jelas serta responsif tanpa memperlambat jalur pengunjung menuju inquiry.",
       },
       {
-        en: "The application had to run reliably within a shared-hosting production environment.",
-        id: "Aplikasi harus berjalan secara andal pada lingkungan production shared hosting.",
+        en: "Sales, stock movement, stock opname, marketplace costs, and invoice totals required consistent calculations, while each module needed a reliable production deployment path.",
+        id: "Penjualan, pergerakan stok, stock opname, biaya marketplace, dan total invoice membutuhkan perhitungan yang konsisten, sedangkan setiap modul memerlukan jalur deployment production yang andal.",
       },
     ],
     workflow: [
       {
-        title: { en: "Record the movement", id: "Catat pergerakan" },
+        title: { en: "Discover the brand", id: "Temukan brand" },
         description: {
-          en: "Users enter stock-in or stock-out activity through a focused operational form.",
-          id: "Pengguna memasukkan aktivitas stok masuk atau keluar melalui form operasional yang terarah.",
+          en: "Visitors use the responsive landing page to understand Luvea's identity and product offering.",
+          id: "Pengunjung memakai landing page responsif untuk memahami identitas dan penawaran produk Luvea.",
         },
       },
       {
-        title: { en: "Validate the entry", id: "Validasi catatan" },
+        title: { en: "Continue to inquiry", id: "Lanjutkan ke inquiry" },
         description: {
-          en: "The application checks required values before committing the movement to the database.",
-          id: "Aplikasi memeriksa nilai wajib sebelum menyimpan pergerakan ke database.",
+          en: "Clear product hierarchy and contact paths help visitors take the next step.",
+          id: "Hierarki produk dan jalur kontak yang jelas membantu pengunjung mengambil langkah berikutnya.",
         },
       },
       {
-        title: { en: "Update availability", id: "Perbarui ketersediaan" },
+        title: { en: "Run sales and inventory", id: "Jalankan penjualan dan inventaris" },
         description: {
-          en: "MySQL stores the transaction and updates the current inventory view.",
-          id: "MySQL menyimpan transaksi dan memperbarui tampilan inventaris terkini.",
+          en: "The operational team records products, sales, incoming stock, stock opname, and traceable stock movement through the administration system.",
+          id: "Tim operasional mencatat produk, penjualan, stok masuk, stock opname, dan pergerakan stok yang dapat ditelusuri melalui sistem administrasi.",
         },
       },
       {
-        title: { en: "Review and correct", id: "Tinjau dan koreksi" },
+        title: { en: "Analyze and document", id: "Analisis dan dokumentasikan" },
         description: {
-          en: "The team monitors records in one place and can identify inconsistencies earlier.",
-          id: "Tim memantau catatan dalam satu tempat dan dapat menemukan ketidaksesuaian lebih awal.",
+          en: "Restock recommendations, targets, period comparisons, margin calculations, reports, and printable invoices turn operational records into actionable outputs.",
+          id: "Rekomendasi restock, target, perbandingan periode, kalkulasi margin, laporan, dan invoice siap cetak mengubah catatan operasional menjadi output yang dapat ditindaklanjuti.",
         },
       },
     ],
     decisions: [
       {
-        title: { en: "Laravel MVC structure", id: "Struktur MVC Laravel" },
+        title: { en: "Separate modules for separate audiences", id: "Modul terpisah untuk pengguna berbeda" },
         description: {
-          en: "Laravel separates inventory rules, request handling, and interface rendering so the application is easier to maintain.",
-          id: "Laravel memisahkan aturan inventaris, penanganan request, dan rendering antarmuka agar aplikasi lebih mudah dipelihara.",
+          en: "The landing page and inventory system remain independent products within one Luvea ecosystem, avoiding a misleading technical integration.",
+          id: "Landing page dan sistem inventaris tetap menjadi produk independen dalam satu ekosistem Luvea sehingga tidak menimbulkan kesan integrasi teknis yang sebenarnya tidak ada.",
         },
       },
       {
-        title: { en: "Relational stock records", id: "Catatan stok relasional" },
+        title: { en: "Next.js for the public experience", id: "Next.js untuk pengalaman publik" },
         description: {
-          en: "MySQL keeps items and stock movements connected so balances can be traced back to their records.",
-          id: "MySQL menghubungkan item dan pergerakan stok sehingga saldo dapat ditelusuri kembali ke catatannya.",
+          en: "Next.js, Tailwind CSS, Framer Motion, and Lenis support a responsive brand experience with controlled motion.",
+          id: "Next.js, Tailwind CSS, Framer Motion, dan Lenis mendukung pengalaman brand responsif dengan motion yang terkontrol.",
         },
       },
       {
-        title: { en: "Practical interface delivery", id: "Penyajian antarmuka yang praktis" },
+        title: { en: "Laravel and MySQL for operations", id: "Laravel dan MySQL untuk operasional" },
         description: {
-          en: "Tailwind CSS and Bootstrap support a clear, responsive interface while Git and SSL support controlled production delivery.",
-          id: "Tailwind CSS dan Bootstrap mendukung antarmuka yang jelas serta responsif, sedangkan Git dan SSL mendukung deployment production yang terkontrol.",
+          en: "Laravel structures sales, inventory, margin, and reporting rules, while MySQL keeps products, transactions, and stock movements traceable.",
+          id: "Laravel menyusun aturan penjualan, inventaris, margin, dan laporan, sedangkan MySQL menjaga produk, transaksi, serta pergerakan stok tetap dapat ditelusuri.",
         },
       },
     ],
     resultIntro: {
-      en: "The system replaced manual tracking with a clearer inventory record and made stock levels and recording errors easier to monitor.",
-      id: "Sistem menggantikan pencatatan manual dengan data inventaris yang lebih jelas serta membuat ketersediaan stok dan kesalahan pencatatan lebih mudah dipantau.",
+      en: "Luvea gained a clearer public touchpoint and a separate operational system that connects product records, sales, stock control, restock planning, margin analysis, reporting, and invoice output.",
+      id: "Luvea memperoleh touchpoint publik yang lebih jelas serta sistem operasional terpisah yang menghubungkan data produk, penjualan, kontrol stok, perencanaan restock, analisis margin, laporan, dan invoice.",
     },
     learnings: [
       {
-        en: "Inventory rules should be defined before designing screens because every interface decision depends on how stock is allowed to move.",
-        id: "Aturan inventaris perlu ditentukan sebelum merancang layar karena setiap keputusan antarmuka bergantung pada cara stok dapat bergerak.",
+        en: "Related business products do not need forced technical integration when their users and goals are different.",
+        id: "Produk bisnis yang berkaitan tidak perlu dipaksakan terintegrasi secara teknis ketika pengguna dan tujuannya berbeda.",
       },
       {
-        en: "A useful dashboard prioritizes exceptions and current availability over decorative metrics.",
-        id: "Dashboard yang berguna memprioritaskan pengecualian dan ketersediaan terkini dibanding metrik dekoratif.",
+        en: "Public interfaces should prioritize product understanding and inquiry, while operational interfaces should prioritize clarity and exceptions.",
+        id: "Antarmuka publik perlu memprioritaskan pemahaman produk dan inquiry, sedangkan antarmuka operasional perlu memprioritaskan kejelasan serta pengecualian.",
       },
       {
-        en: "Traceable movement records are essential when the team needs to investigate a stock difference.",
-        id: "Catatan pergerakan yang dapat ditelusuri sangat penting ketika tim perlu menyelidiki selisih stok.",
+        en: "Choosing technology per module produces a better result than applying one stack to every business need.",
+        id: "Memilih teknologi berdasarkan kebutuhan setiap modul menghasilkan solusi yang lebih baik daripada menerapkan satu stack untuk semua kebutuhan bisnis.",
       },
     ],
     coverCaption: {
-      en: "The Luvea dashboard brings inventory status, stock movement, and reporting into one operational view.",
-      id: "Dashboard Luvea menyatukan status inventaris, pergerakan stok, dan laporan dalam satu tampilan operasional.",
+      en: "The Luvea digital platform combines a customer-facing landing page with a separate system for inventory, sales, margin analysis, reporting, and invoices.",
+      id: "Platform Digital Luvea menggabungkan landing page untuk pelanggan dengan sistem terpisah untuk inventaris, penjualan, analisis margin, laporan, dan invoice.",
     },
   },
   "luvea-website": {
@@ -568,7 +568,7 @@ export const caseStudies: Record<string, CaseStudyContent> = {
   "pga-inventory-request-system": {
     overview: {
       role: { en: "Full-stack Laravel development and workflow design", id: "Pengembangan Laravel full-stack dan perancangan workflow" },
-      users: { en: "Admin GA and division users", id: "Admin GA dan pengguna divisi" },
+      users: { en: "Admin GA and one supervisor-held account per division", id: "Admin GA dan satu akun per divisi yang dipegang SPV" },
       status: { en: "Administration workflow documented", id: "Workflow administrasi terdokumentasi" },
     },
     problem: [
@@ -601,8 +601,8 @@ export const caseStudies: Record<string, CaseStudyContent> = {
       {
         title: { en: "Open a request period", id: "Buka periode permintaan" },
         description: {
-          en: "Admin GA creates an active submission window, then division users prepare and submit their inventory needs.",
-          id: "Admin GA membuat periode pengajuan aktif, kemudian pengguna divisi menyiapkan dan mengirim kebutuhan inventaris mereka.",
+          en: "Admin GA creates an active submission window. Each division's supervisor, or a person they designate, then prepares and submits the division's inventory needs through its dedicated account.",
+          id: "Admin GA membuat periode pengajuan aktif. SPV setiap divisi, atau petugas yang ditunjuk, kemudian menyiapkan dan mengirim kebutuhan inventaris melalui akun khusus divisinya.",
         },
       },
       {
@@ -645,8 +645,8 @@ export const caseStudies: Record<string, CaseStudyContent> = {
       {
         title: { en: "Role-based authorization", id: "Otorisasi berbasis peran" },
         description: {
-          en: "Admin GA controls periods, reviews, fulfillment, and inventory, while division users work within their request scope.",
-          id: "Admin GA mengatur periode, review, realisasi, dan inventaris, sedangkan pengguna divisi bekerja dalam ruang lingkup permintaannya.",
+          en: "Admin GA controls periods, reviews, fulfillment, and inventory. Each division has one account held by its supervisor and used by the supervisor or designated staff within that division's request scope.",
+          id: "Admin GA mengatur periode, review, realisasi, dan inventaris. Setiap divisi memiliki satu akun yang dipegang SPV dan digunakan oleh SPV atau petugas yang ditunjuk dalam ruang lingkup permintaan divisinya.",
         },
       },
       {
@@ -658,8 +658,8 @@ export const caseStudies: Record<string, CaseStudyContent> = {
       },
     ],
     resultIntro: {
-      en: "The system connects cross-department requests, item-level review, stock-aware fulfillment, reporting, and signed handover evidence in one workflow.",
-      id: "Sistem menghubungkan permintaan lintas divisi, review per barang, realisasi berbasis stok, pelaporan, dan bukti serah terima bertanda tangan dalam satu workflow.",
+      en: "The system connects controlled division accounts with Admin GA's review, stock-aware fulfillment, reporting, and signed handover process in one traceable workflow.",
+      id: "Sistem menghubungkan akun divisi yang terkontrol dengan proses review Admin GA, realisasi berbasis stok, pelaporan, dan serah terima bertanda tangan dalam satu workflow yang dapat ditelusuri.",
     },
     learnings: [
       {
